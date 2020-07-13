@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:gravity="center_horizontal"
+    app:cardCornerRadius="@dimen/_3sdp"
+    app:cardElevation="@dimen/_3sdp">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:paddingTop="35dp"
+        android:paddingBottom="35dp">
+
+        <woopy.com.juanmckenzie.caymanall.views.TextViewC
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="@string/select_option"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+
+        <woopy.com.juanmckenzie.caymanall.views.TextViewC
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="@dimen/_15sdp"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="........................................................."
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+
+        <LinearLayout
+            android:id="@+id/CreateAd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?attr/selectableItemBackground"
+            android:gravity="center">
+
+            <woopy.com.juanmckenzie.caymanall.views.TextViewC
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center|start"
+                android:paddingStart="@dimen/_40sdp"
+                android:text="@string/create_ad"
+                android:textColor="@color/main_color"
+                android:textSize="16sp" />
+
+
+            <woopy.com.juanmckenzie.caymanall.views.TextViewC
+                android:id="@+id/CreateAd1"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:gravity="center|start"
+                android:paddingStart="@dimen/_40sdp"
+                android:textColor="@color/main_color"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/CreateEvent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?attr/selectableItemBackground"
+            android:gravity="center">
+
+            <woopy.com.juanmckenzie.caymanall.views.TextViewC
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center|start"
+                android:paddingStart="@dimen/_40sdp"
+                android:text="@string/create_event"
+                android:textColor="@color/main_color"
+                android:textSize="16sp" />
+
+            <woopy.com.juanmckenzie.caymanall.views.TextViewC
+                android:id="@+id/CreateEvent1"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:gravity="center|start"
+                android:paddingStart="@dimen/_40sdp"
+                android:textColor="@color/main_color"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/CreateNews"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?attr/selectableItemBackground"
+            android:gravity="center">
+
+            <woopy.com.juanmckenzie.caymanall.views.TextViewC
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center|start"
+                android:paddingStart="@dimen/_40sdp"
+                android:text="@string/create_news"
+                android:textColor="@color/main_color"
+                android:textSize="16sp" />
+
+
+            <woopy.com.juanmckenzie.caymanall.views.TextViewC
+                android:id="@+id/CreateNews1"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:gravity="center|start"
+                android:paddingStart="@dimen/_40sdp"
+                android:textColor="@color/main_color"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/Addbanner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?attr/selectableItemBackground"
+            android:gravity="center">
+
+            <woopy.com.juanmckenzie.caymanall.views.TextViewC
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center|start"
+                android:paddingStart="@dimen/_40sdp"
+                android:text="@string/create_banner"
+                android:textColor="@color/main_color"
+                android:textSize="16sp" />
+
+            <woopy.com.juanmckenzie.caymanall.views.TextViewC
+                android:id="@+id/Addbanner1"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:gravity="center|start"
+                android:paddingStart="@dimen/_40sdp"
+                android:textColor="@color/main_color"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+
+
+        <woopy.com.juanmckenzie.caymanall.views.TextViewC
+            android:id="@+id/Cancel"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:gravity="center"
+            android:text="@string/cancel"
+            android:textColor="@color/main_color"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

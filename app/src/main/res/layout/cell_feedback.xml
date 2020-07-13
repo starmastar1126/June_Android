@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="@dimen/_1sdp"
+    app:cardCornerRadius="@dimen/_3sdp"
+    app:cardElevation="@dimen/_1sdp">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/feedsStarsImg"
+            android:layout_width="80dp"
+            android:layout_height="20dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:scaleType="centerCrop"
+            app:srcCompat="@drawable/star0" />
+
+        <TextView
+            android:id="@+id/feedsByDateTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/feedsStarsImg"
+            android:layout_marginLeft="10dp"
+            android:layout_toEndOf="@+id/feedsStarsImg"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:text="@string/loading"
+            android:textColor="#333"
+            android:textSize="12sp"
+            android:textStyle="normal|bold" />
+
+        <TextView
+            android:id="@+id/feedsAdTitleTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/feedsStarsImg"
+            android:layout_alignStart="@+id/feedsStarsImg"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="5dp"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:text="@string/loading"
+            android:textColor="#333"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/feedsFeedbackTxt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/feedsAdTitleTxt"
+            android:layout_alignStart="@+id/feedsAdTitleTxt"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="10dp"
+            android:text="@string/loading"
+            android:textSize="11sp" />
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

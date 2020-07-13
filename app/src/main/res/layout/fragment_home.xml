@@ -1,0 +1,184 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grayBg">
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/animation_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/loading" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/alOptionsLayout"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_below="@+id/feedsTopView"
+            android:background="#82BFBEBE"
+            android:weightSum="1">
+
+            <RelativeLayout
+                android:id="@+id/aal_location_rl"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:paddingStart="8dp"
+                android:paddingTop="8dp"
+                android:paddingEnd="4dp">
+
+                <ImageView
+                    android:id="@+id/imageView7"
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginEnd="4dp"
+                    ads:srcCompat="@drawable/small_loc_icon" />
+
+                <TextView
+                    android:id="@+id/alDistanceTxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignEnd="@+id/alCityCountryTV"
+                    android:layout_toEndOf="@+id/imageView7"
+                    android:singleLine="true"
+                    android:text="@string/loading"
+                    android:textSize="11sp" />
+
+                <TextView
+                    android:id="@+id/alCityCountryTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/alDistanceTxt"
+                    android:layout_toEndOf="@+id/imageView7"
+                    android:maxLines="2"
+                    android:text="@string/new_york_usa"
+                    android:textAllCaps="false"
+                    android:textColor="#333"
+                    android:textSize="12sp" />
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:orientation="vertical"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"></androidx.recyclerview.widget.RecyclerView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/recycler_view"
+            android:gravity="center"
+            android:padding="10dp">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:layout_weight="1"
+                android:orientation="vertical"></LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <com.varunest.sparkbutton.SparkButton
+                    android:id="@+id/Dislike"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:sparkbutton_activeImage="@drawable/close_active"
+                    app:sparkbutton_animationSpeed="1.5"
+                    app:sparkbutton_iconSize="@dimen/_40sdp"
+                    app:sparkbutton_inActiveImage="@drawable/close_active"
+                    app:sparkbutton_primaryColor="@android:color/transparent"
+                    app:sparkbutton_secondaryColor="@android:color/transparent" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_50sdp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <com.varunest.sparkbutton.SparkButton
+                    android:id="@+id/Refrash"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:sparkbutton_activeImage="@drawable/refreash"
+                    app:sparkbutton_animationSpeed="1.5"
+                    app:sparkbutton_iconSize="@dimen/_50sdp"
+                    app:sparkbutton_inActiveImage="@drawable/refreash"
+                    app:sparkbutton_primaryColor="@android:color/transparent"
+                    app:sparkbutton_secondaryColor="@android:color/transparent" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <com.varunest.sparkbutton.SparkButton
+                    android:id="@+id/Like"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:sparkbutton_activeImage="@drawable/heart_inactive"
+                    app:sparkbutton_animationSpeed="1.5"
+                    app:sparkbutton_iconSize="@dimen/_40sdp"
+                    app:sparkbutton_inActiveImage="@drawable/heart_inactive"
+                    app:sparkbutton_primaryColor="@android:color/transparent"
+                    app:sparkbutton_secondaryColor="@android:color/transparent" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:layout_weight="1"
+                android:orientation="vertical"></LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/checkvisibility"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/darkOverlay"
+        android:clickable="true"
+        android:visibility="gone">
+
+
+        <woopy.com.juanmckenzie.caymanall.views.TextViewC
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="@string/please_change_the_visibility_settings_on_your_account_settings"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/_15sdp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+</RelativeLayout>

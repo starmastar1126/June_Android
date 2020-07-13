@@ -1,0 +1,481 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:shimmer="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grayBg"
+    android:focusableInTouchMode="true"
+    tools:context=".ads.activities.AdsListActivity">
+
+    <RelativeLayout
+        android:id="@+id/alTopView"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:background="@color/colorPrimary">
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/alSearchTxt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_toStartOf="@+id/alChatButt"
+            android:layout_toEndOf="@+id/alBackButt"
+            android:backgroundTint="#f2f2f2"
+            android:gravity="center"
+            android:hint="@string/search_hint_caymanall"
+            android:imeOptions="actionSearch"
+            android:inputType="none"
+            android:maxLines="1"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:paddingBottom="16dp"
+            android:singleLine="true"
+            android:textColor="#fff"
+            android:textColorHint="#f2f2f2"
+            android:textSize="14sp" />
+
+        <ImageView
+            android:id="@+id/alBackButt"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:padding="13dp"
+            android:src="@drawable/back_ic" />
+
+        <ImageView
+            android:id="@+id/alChatButt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="10dp"
+            android:padding="10dp"
+            android:src="@drawable/chat_square_ic" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/alNoResultsLayout"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_below="@+id/alOptionsLayout"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="14dp"
+        android:visibility="invisible">
+
+        <ImageView
+            android:id="@+id/imageView10"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="50dp"
+            ads:srcCompat="@drawable/no_search" />
+
+        <TextView
+            android:id="@+id/alNoSearchTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imageView10"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:gravity="center_horizontal"
+            android:text="Your search did not match any listings. Try another search?"
+            android:textAlignment="center"
+            android:textColor="@color/colorPrimary"
+            android:textSize="14sp"
+            android:textStyle="normal|bold" />
+    </RelativeLayout>
+
+    <com.facebook.shimmer.ShimmerFrameLayout
+        android:id="@+id/promotions"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/alOptionsLayout"
+        android:paddingBottom="15dp"
+        shimmer:duration="700">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="10dp">
+
+                <include
+                    layout="@layout/item_shade"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    android:layout_weight="1" />
+
+                <include
+                    layout="@layout/item_shade"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    android:layout_weight="1" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="10dp">
+
+                <include
+                    layout="@layout/item_shade"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    android:layout_weight="1" />
+
+                <include
+                    layout="@layout/item_shade"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    android:layout_weight="1" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="10dp">
+
+                <include
+                    layout="@layout/item_shade"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    android:layout_weight="1" />
+
+                <include
+                    layout="@layout/item_shade"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    android:layout_weight="1" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="10dp">
+
+                <include
+                    layout="@layout/item_shade"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    android:layout_weight="1" />
+
+                <include
+                    layout="@layout/item_shade"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    android:layout_weight="1" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </com.facebook.shimmer.ShimmerFrameLayout>
+
+    <com.mlsdev.animatedrv.AnimatedRecyclerView
+        android:id="@+id/aal_ads_rv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/alOptionsLayout"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="@dimen/_15sdp"
+        android:clipToPadding="false"
+        android:paddingTop="10dp"
+        android:paddingBottom="85dp"
+        android:scrollbars="none"
+        android:visibility="gone"
+        app:animationDuration="600"
+        app:layoutAnimation="@anim/layout_animation_from_scale"
+        app:layoutManagerOrientation="vertical"
+        app:layoutManagerReverse="false"
+        app:layoutManagerType="grid" />
+
+
+    <RelativeLayout
+        android:id="@+id/banner"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="@dimen/_20sdp"
+        android:layout_marginEnd="@dimen/_20sdp"
+        android:background="#82BFBEBE"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+
+        <com.smarteist.autoimageslider.SliderView
+            android:id="@+id/imageSlider"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/transparent"
+            android:visibility="gone"
+            app:sliderAnimationDuration="0"
+            app:sliderAutoCycleDirection="back_and_forth"
+            app:sliderAutoCycleEnabled="true"
+            app:sliderCircularHandlerEnabled="true"
+            app:sliderIndicatorGravity="center_horizontal|bottom"
+            app:sliderIndicatorMargin="15dp"
+            app:sliderIndicatorOrientation="vertical"
+            app:sliderIndicatorSelectedColor="@android:color/transparent"
+            app:sliderIndicatorUnselectedColor="@android:color/transparent"
+            app:sliderScrollTimeInSec="10"
+            app:sliderStartAutoCycle="true" />
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            ads:cardCornerRadius="@dimen/_1sdp">
+
+            <ImageView
+                android:id="@+id/ial_image_iv"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:cropToPadding="true" />
+
+            <TextView
+                android:id="@+id/ial_title_tv"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_alignParentBottom="true"
+                android:background="@drawable/shape1"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:lines="1"
+                android:maxLines="1"
+                android:paddingStart="16dp"
+                android:paddingTop="8dp"
+                android:paddingEnd="16dp"
+                android:paddingBottom="8dp"
+                android:text="Loading..."
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                android:visibility="gone"
+                tools:text="Toyota Auris" />
+        </androidx.cardview.widget.CardView>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/alOptionsLayout"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_below="@+id/alTopView"
+        android:background="#82BFBEBE">
+
+        <RelativeLayout
+            android:id="@+id/aal_location_rl"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:paddingStart="8dp"
+            android:paddingTop="8dp"
+            android:paddingEnd="4dp">
+
+            <ImageView
+                android:id="@+id/imageView7"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_alignParentStart="true"
+                android:layout_marginEnd="4dp"
+                ads:srcCompat="@drawable/small_loc_icon" />
+
+            <TextView
+                android:id="@+id/alDistanceTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignEnd="@+id/alCityCountryTV"
+                android:layout_toEndOf="@+id/imageView7"
+                android:singleLine="true"
+                android:text="@string/loading"
+                android:textSize="11sp" />
+
+            <TextView
+                android:id="@+id/alCityCountryTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/alDistanceTxt"
+                android:layout_toEndOf="@+id/imageView7"
+                android:maxLines="2"
+                android:text="@string/new_york_usa"
+                android:textAllCaps="false"
+                android:textColor="#333"
+                android:textSize="12sp" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="4dp"
+            android:background="@color/gray" />
+
+        <RelativeLayout
+            android:id="@+id/aal_sort_rl"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:paddingStart="8dp"
+            android:paddingTop="8dp"
+            android:paddingEnd="4dp">
+
+            <ImageView
+                android:id="@+id/imageView9"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_marginEnd="4dp"
+                ads:srcCompat="@drawable/small_sort_icon" />
+
+            <TextView
+                android:id="@+id/alsortlabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/imageView9"
+                android:singleLine="true"
+                android:text="@string/sort_by"
+                android:textSize="11sp" />
+
+            <TextView
+                android:id="@+id/alSortByTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/alsortlabel"
+                android:layout_alignParentBottom="true"
+                android:layout_toEndOf="@+id/imageView9"
+                android:background="@android:color/transparent"
+                android:maxLines="2"
+                android:text="@string/recent"
+                android:textAllCaps="false"
+                android:textColor="#333"
+                android:textSize="12sp" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="4dp"
+            android:background="@color/gray" />
+
+        <RelativeLayout
+            android:id="@+id/aal_category_rl"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:paddingStart="8dp"
+            android:paddingTop="8dp"
+            android:paddingEnd="4dp">
+
+            <ImageView
+                android:id="@+id/imageView8"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_marginEnd="4dp"
+                ads:srcCompat="@drawable/small_category" />
+
+            <TextView
+                android:id="@+id/alcatlabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/imageView8"
+                android:singleLine="true"
+                android:text="@string/category1"
+                android:textSize="11sp" />
+
+            <TextView
+                android:id="@+id/alCategoryTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/alcatlabel"
+                android:layout_toEndOf="@+id/imageView8"
+                android:maxLines="2"
+                android:text="@string/all"
+                android:textAllCaps="false"
+                android:textColor="#333"
+                android:textSize="12sp" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="4dp"
+            android:background="@color/gray"
+            android:visibility="gone" />
+
+        <RelativeLayout
+            android:id="@+id/aal_sub_category_rl"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:paddingStart="8dp"
+            android:paddingTop="8dp"
+            android:paddingEnd="4dp"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/_subimageView8"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_marginEnd="4dp"
+                ads:srcCompat="@drawable/small_category" />
+
+            <TextView
+                android:id="@+id/_subalcatlabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/_subimageView8"
+                android:singleLine="true"
+                android:text="@string/subcategory"
+                android:textSize="11sp" />
+
+            <TextView
+                android:id="@+id/_subalCategoryTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/_subalcatlabel"
+                android:layout_toEndOf="@+id/_subimageView8"
+                android:maxLines="2"
+                android:text="@string/all"
+                android:textAllCaps="false"
+                android:textColor="#333"
+                android:textSize="12sp" />
+        </RelativeLayout>
+    </LinearLayout>
+</RelativeLayout>

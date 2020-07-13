@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+        <variable
+            name="jobobj"
+            type="woopy.com.juanmckenzie.caymanall.formsjobs.modules.Formobject" />
+    </data>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:segmentedgroup="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/sign_up"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/grayBg"
+        android:focusableInTouchMode="true"
+        tools:context=".landing.SignUp">
+
+
+        <ScrollView
+            android:id="@+id/scrollView"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_gravity="center">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="@dimen/_10sdp">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    app:cardCornerRadius="@dimen/_3sdp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="@dimen/_10sdp">
+
+                        <woopy.com.juanmckenzie.caymanall.views.TextViewC
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/provide_if_there_is_any_military_services_optional"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="@dimen/_12sdp"
+                            android:textStyle="bold" />
+
+                        <com.rengwuxian.materialedittext.MaterialEditText
+                            android:id="@+id/mname"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:editable="false"
+                            android:hint="@string/branch"
+                            android:imeOptions="actionNext"
+                            android:inputType="none"
+                            android:paddingStart="@dimen/_10sdp"
+                            android:singleLine="true"
+                            android:text="@{jobobj.mname}"
+                            android:textAlignment="viewStart"
+                            android:textSize="14sp"
+                            app:met_floatingLabel="highlight"
+                            app:met_floatingLabelTextColor="@color/colorPrimary" />
+
+
+                        <com.rengwuxian.materialedittext.MaterialEditText
+                            android:id="@+id/mfrom"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:editable="false"
+                           
+                            android:hint="@string/from_00_00_0000"
+                            android:imeOptions="actionNext"
+                            android:inputType="date"
+                            android:paddingStart="@dimen/_10sdp"
+                            android:singleLine="true"
+                            android:text="@{jobobj.mfrom}"
+                            android:textAlignment="viewStart"
+                            android:textSize="14sp"
+                            app:met_floatingLabel="highlight"
+                            app:met_floatingLabelTextColor="@color/colorPrimary" />
+
+                        <com.rengwuxian.materialedittext.MaterialEditText
+                            android:id="@+id/mto"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:editable="false"
+                           
+                            android:hint="@string/to_00_00_0000"
+                            android:imeOptions="actionNext"
+                            android:inputType="date"
+                            android:paddingStart="@dimen/_10sdp"
+                            android:singleLine="true"
+                            android:text="@{jobobj.mto}"
+                            android:textAlignment="viewStart"
+                            android:textSize="14sp"
+                            app:met_floatingLabel="highlight"
+                            app:met_floatingLabelTextColor="@color/colorPrimary" />
+
+                        <com.rengwuxian.materialedittext.MaterialEditText
+                            android:id="@+id/mrank"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:editable="false"
+                           
+                            android:hint="@string/rank_at_discharge"
+                            android:imeOptions="actionNext"
+                            android:inputType="none"
+                            android:paddingStart="@dimen/_10sdp"
+                            android:singleLine="true"
+                            android:text="@{jobobj.mrankofdischarge}"
+                            android:textAlignment="viewStart"
+                            android:textSize="14sp"
+                            app:met_floatingLabel="highlight"
+                            app:met_floatingLabelTextColor="@color/colorPrimary" />
+
+
+                        <com.rengwuxian.materialedittext.MaterialEditText
+                            android:id="@+id/mdischarge"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:editable="false"
+                           
+                            android:hint="@string/type_of_discharge"
+                            android:imeOptions="actionNext"
+                            android:inputType="none"
+                            android:paddingStart="@dimen/_10sdp"
+                            android:singleLine="true"
+                            android:text="@{jobobj.mtypeofdischarge}"
+                            android:textAlignment="viewStart"
+                            android:textSize="14sp"
+                            app:met_floatingLabel="highlight"
+                            app:met_floatingLabelTextColor="@color/colorPrimary" />
+
+                        <com.rengwuxian.materialedittext.MaterialEditText
+                            android:id="@+id/mifotherthenhonorable"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:editable="false"
+                           
+                            android:hint="@string/if_other_than_honorable_explain"
+                            android:imeOptions="actionDone"
+                            android:inputType="text"
+                            android:lines="3"
+                            android:maxLines="3"
+                            android:minLines="2"
+                            android:paddingStart="@dimen/_10sdp"
+                            android:singleLine="true"
+                            android:text="@{jobobj.mifotherthem}"
+                            android:textAlignment="viewStart"
+                            android:textSize="14sp"
+                            app:met_floatingLabel="highlight"
+                            app:met_floatingLabelTextColor="@color/colorPrimary" />
+
+                    </LinearLayout>
+
+
+                </androidx.cardview.widget.CardView>
+
+                <Button
+                    android:id="@+id/next"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_below="@+id/fullnameTxt"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/colorPrimary"
+                    android:text="@string/continuebutton"
+                    android:textColor="#fff"
+                    android:textSize="16sp"
+                    android:textStyle="normal|bold"
+                    android:visibility="gone" />
+            </LinearLayout>
+        </ScrollView>
+
+
+    </LinearLayout>
+</layout>

@@ -1,0 +1,519 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".ads.activities.AdDetailsActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary">
+
+        <ImageView
+            android:id="@+id/aad_back_iv"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:layout_centerVertical="true"
+            android:paddingTop="13dp"
+            android:paddingEnd="13dp"
+            android:paddingBottom="13dp"
+            android:src="@drawable/back_ic" />
+
+        <TextView
+            android:id="@+id/aad_toolbar_title_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center"
+            android:gravity="center_vertical"
+            android:text="@string/news_details"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="19sp"
+            android:textStyle="normal|bold" />
+
+        <ImageView
+            android:id="@+id/Edit"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:layout_alignBaseline="@+id/textView"
+            android:layout_alignBottom="@+id/textView"
+            android:layout_alignParentEnd="true"
+            android:layout_gravity="end"
+            android:layout_marginEnd="10dp"
+            android:padding="11dp"
+            android:src="@android:drawable/ic_menu_edit"
+            android:tint="@color/white"
+            android:visibility="gone" />
+    </androidx.appcompat.widget.Toolbar>
+
+    <ScrollView
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:fillViewport="true"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.viewpager.widget.ViewPager
+                    android:id="@+id/aad_images_vp"
+                    android:layout_width="match_parent"
+                    android:layout_height="220dp"
+                    tools:background="@drawable/login_bkg" />
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:background="@drawable/bottom_title_gradient_bg"
+                    android:paddingTop="16dp"
+                    android:paddingBottom="8dp">
+
+                    <com.tbuonomo.viewpagerdotsindicator.DotsIndicator
+                        android:id="@+id/dots_indicator"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        app:dotsColor="@color/colorPrimary"
+                        app:dotsCornerRadius="8dp"
+                        app:dotsSize="10dp"
+                        app:dotsSpacing="4dp"
+                        app:dotsWidthFactor="1.5"
+                        app:progressMode="true"
+                        app:selectedDotColor="@color/white" />
+                </FrameLayout>
+            </FrameLayout>
+
+            <Button
+                android:id="@+id/aad_options_btn"
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="-22dp"
+                android:background="@drawable/circle_red_shape_bg"
+                android:padding="8dp"
+                android:text="@string/options_dots"
+                android:textColor="@color/white"
+                android:textSize="15sp" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="24dp"
+                android:layout_marginBottom="8dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/aad_play_video_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="20dp"
+                    android:background="?attr/selectableItemBackground"
+                    android:drawableStart="@drawable/video_icon"
+                    android:gravity="center_vertical"
+                    android:padding="10dp"
+                    android:src="@drawable/video_icon"
+                    android:text="@string/video_watch"
+                    android:textColor="@color/gray"
+                    android:textSize="14sp" />
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:gravity="center"
+                    android:layout_centerVertical="true"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:id="@+id/view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_toStartOf="@+id/aad_likes_tv"
+                        android:drawableStart="@drawable/ic_remove_red_eye_black_24dp1"
+                        android:drawablePadding="8dp"
+                        android:drawableTint="@color/gray"
+                        android:ellipsize="end"
+                        android:layout_marginEnd="@dimen/_10sdp"
+                        android:singleLine="true"
+                        android:textSize="@dimen/_12sdp"
+                        android:textColor="@color/gray"
+                        tools:text="453" />
+
+                    <TextView
+                        android:id="@+id/aad_date_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:drawableStart="@drawable/time_ic"
+                        android:drawablePadding="8dp"
+                        android:drawableTint="@color/gray"
+                        android:ellipsize="end"
+                        android:singleLine="true"
+                        android:text="@string/_9_jul_2018"
+                        android:textColor="@color/gray"
+                        android:textSize="@dimen/_12sdp" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginEnd="24dp">
+
+                <TextView
+                    android:id="@+id/aad_title_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginEnd="16dp"
+                    android:layout_toStartOf="@+id/aad_price_tv"
+                    android:ellipsize="end"
+                    android:maxLines="3"
+                    android:textColor="@color/black"
+                    android:textSize="17sp"
+                    tools:text="Toyota Prius" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_weight="1"
+                android:background="@color/grayBg"
+                android:orientation="vertical"
+                android:paddingStart="24dp"
+                android:paddingTop="16dp"
+                android:paddingEnd="24dp"
+                android:paddingBottom="36dp">
+
+                <TextView
+                    android:id="@+id/aad_description_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    tools:text="Description" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="8dp"
+                    android:background="@color/separator" />
+
+                <TextView
+                    android:id="@+id/aad_comment_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="24dp"
+                    android:drawableStart="@drawable/comment_ic"
+                    android:drawablePadding="16dp"
+                    android:padding="10dp"
+                    android:text="@string/comments"
+                    android:textColor="@color/main_color"
+                    android:textSize="14sp" />
+
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+    <ScrollView
+        android:id="@+id/mainhide"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.elyeproj.loaderviewlibrary.LoaderImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="220dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_gravity="bottom"
+                    android:paddingTop="16dp"
+                    android:paddingBottom="8dp">
+
+
+
+                    <com.elyeproj.loaderviewlibrary.LoaderTextView
+                        android:layout_width="@dimen/_10sdp"
+                        android:background="@drawable/roundshape"
+                        app:custom_color="@color/color_primary_dark"
+                        app:corners="100"
+                        android:layout_marginEnd="@dimen/_3sdp"
+                        android:layout_height="@dimen/_10sdp"/>
+                    <com.elyeproj.loaderviewlibrary.LoaderTextView
+                        android:layout_width="@dimen/_10sdp"
+                        android:layout_marginEnd="@dimen/_3sdp"
+                        app:corners="100"
+                        app:custom_color="@color/color_primary_dark"
+                        android:background="@drawable/roundshape"
+                        android:layout_height="@dimen/_10sdp"/>
+                    <com.elyeproj.loaderviewlibrary.LoaderTextView
+                        android:layout_width="@dimen/_10sdp"
+                        android:layout_marginEnd="@dimen/_3sdp"
+                        app:corners="100"
+                        app:custom_color="@color/color_primary_dark"
+                        android:background="@drawable/roundshape"
+                        android:layout_height="@dimen/_10sdp"/>
+                    <com.elyeproj.loaderviewlibrary.LoaderTextView
+                        android:layout_width="@dimen/_10sdp"
+                        app:corners="100"
+                        app:custom_color="@color/color_primary_dark"
+                        android:layout_marginEnd="@dimen/_3sdp"
+                        android:background="@drawable/roundshape"
+                        android:layout_height="@dimen/_10sdp"/>
+
+
+                    <com.tbuonomo.viewpagerdotsindicator.DotsIndicator
+                        android:layout_width="wrap_content"
+                        android:visibility="gone"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        app:dotsColor="@color/colorPrimary"
+                        app:dotsCornerRadius="8dp"
+                        app:dotsSize="10dp"
+                        app:dotsSpacing="4dp"
+                        app:dotsWidthFactor="1.5"
+                        app:progressMode="true"
+                        app:selectedDotColor="@color/white" />
+
+                </LinearLayout>
+            </FrameLayout>
+
+            <com.elyeproj.loaderviewlibrary.LoaderTextView
+                android:layout_width="44dp"
+                android:background="@drawable/roundshape"
+                android:layout_height="44dp"
+                app:corners="100"
+                android:layout_marginStart="20dp"
+                app:custom_color="@color/color_primary_dark"
+                android:layout_marginTop="-22dp"
+                android:textColor="@color/white"
+                android:textSize="15sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:padding="@dimen/_5sdp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="24dp"
+                android:layout_marginBottom="8dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="24dp"
+                    android:layout_toStartOf="@+id/aad_likes_tv"
+                    android:drawableStart="@drawable/eye"
+                    android:drawablePadding="4dp"
+                    android:ellipsize="end"
+                    android:visibility="invisible"
+                    android:singleLine="true"
+                    android:textColor="@color/gray"
+                    tools:text="453" />
+
+                <com.elyeproj.loaderviewlibrary.LoaderTextView
+                    android:layout_width="@dimen/_50sdp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="14dp"
+                    android:layout_toStartOf="@+id/aad_date_tv"
+                    android:drawablePadding="4dp"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:textColor="@color/gray" />
+
+                <com.elyeproj.loaderviewlibrary.LoaderTextView
+                    android:layout_width="@dimen/_100sdp"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:textColor="@color/gray" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:gravity="center|end"
+                android:layout_marginEnd="24dp"
+                android:padding="@dimen/_5sdp"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:layout_height="wrap_content">
+                <com.elyeproj.loaderviewlibrary.LoaderTextView
+                    android:layout_width="@dimen/_70sdp"
+                    android:layout_height="30sp"
+                    android:background="?attr/selectableItemBackground"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/gray"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginEnd="24dp">
+
+                <com.elyeproj.loaderviewlibrary.LoaderTextView
+                    android:layout_width="@dimen/_150sdp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginEnd="16dp"
+                    android:textColor="@color/black"
+                    android:textSize="17sp" />
+
+                <com.elyeproj.loaderviewlibrary.LoaderTextView
+                    android:layout_width="@dimen/_100sdp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:textColor="@color/main_color"
+                    android:textSize="17sp" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@color/grayBg"
+                android:orientation="vertical"
+                android:paddingStart="24dp"
+                android:paddingTop="16dp"
+                android:paddingEnd="24dp"
+                android:paddingBottom="36dp">
+
+                <com.elyeproj.loaderviewlibrary.LoaderTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_15sdp"
+                    app:custom_color="@android:color/darker_gray"
+                    android:textStyle="bold" />
+
+
+
+                <com.elyeproj.loaderviewlibrary.LoaderTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_15sdp"
+                    android:layout_marginTop="@dimen/_1sdp"
+                    app:custom_color="@android:color/darker_gray"
+                    android:textStyle="bold" />
+
+                <com.elyeproj.loaderviewlibrary.LoaderTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_15sdp"
+                    android:layout_marginTop="@dimen/_1sdp"
+                    app:custom_color="@android:color/darker_gray"
+                    android:textStyle="bold" />
+
+                <com.elyeproj.loaderviewlibrary.LoaderTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_15sdp"
+                    android:layout_marginTop="@dimen/_1sdp"
+                    app:custom_color="@android:color/darker_gray"
+                    android:textStyle="bold" />
+
+                <com.elyeproj.loaderviewlibrary.LoaderTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_15sdp"
+                    android:layout_marginTop="@dimen/_1sdp"
+                    app:custom_color="@android:color/darker_gray"
+                    android:textStyle="bold" />
+
+                <com.elyeproj.loaderviewlibrary.LoaderTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_15sdp"
+                    android:layout_marginTop="@dimen/_1sdp"
+                    app:custom_color="@android:color/darker_gray"
+                    android:textStyle="bold" />
+
+
+
+
+                <com.elyeproj.loaderviewlibrary.LoaderTextView
+                    android:layout_width="@dimen/_150sdp"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_15sdp"
+                    android:layout_marginTop="@dimen/_1sdp"
+                    app:custom_color="@android:color/darker_gray"
+                    android:textStyle="bold" />
+
+                <com.elyeproj.loaderviewlibrary.LoaderTextView
+                    android:layout_width="@dimen/_140sdp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="24dp"
+                    android:drawableStart="@drawable/applyforjob"
+                    android:drawablePadding="16dp"
+                    android:drawableTint="@color/red"
+                    android:padding="10dp"
+                    android:textColor="@color/main_color"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:visibility="gone" />
+
+                <com.elyeproj.loaderviewlibrary.LoaderTextView
+                    android:layout_width="@dimen/_140sdp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="16dp"
+                    android:drawablePadding="16dp"
+                    android:padding="10dp"
+                    android:textColor="@color/main_color"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

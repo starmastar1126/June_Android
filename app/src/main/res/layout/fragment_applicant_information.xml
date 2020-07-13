@@ -1,0 +1,558 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+        <variable
+            name="jobobj"
+            type="woopy.com.juanmckenzie.caymanall.formsjobs.modules.Formobject" />
+    </data>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/sign_up"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/grayBg"
+        android:focusableInTouchMode="true"
+        tools:context=".landing.SignUp">
+
+
+        <ScrollView
+            android:id="@+id/scrollView"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="@dimen/_10sdp">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/profile"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="50dp"
+                    android:layout_marginBottom="10dp"
+                    android:src="@drawable/singlelogo" />
+
+                <RelativeLayout
+                    android:layout_width="120dp"
+                    android:layout_height="44dp"
+                    android:layout_below="@+id/cadAvatarImg"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="2dp"
+                    android:background="#96333333">
+
+                    <Button
+                        android:id="@+id/signupCamButt"
+                        android:layout_width="44dp"
+                        android:layout_height="44dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:background="@drawable/cam_icon" />
+
+                    <Button
+                        android:id="@+id/signupGalleryButt"
+                        android:layout_width="44dp"
+                        android:layout_height="44dp"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentEnd="true"
+                        android:background="@drawable/library_icon" />
+                </RelativeLayout>
+
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    app:cardCornerRadius="@dimen/_3sdp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="@dimen/_10sdp">
+
+                        <woopy.com.juanmckenzie.caymanall.views.TextViewC
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/full_name"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="@dimen/_12sdp"
+                            android:textStyle="bold" />
+
+                        <woopy.com.juanmckenzie.caymanall.views.EditTextC
+                            android:id="@+id/firstname"
+                            android:layout_width="match_parent"
+                            android:layout_height="44dp"
+                            android:layout_marginTop="10dp"
+                            android:hint="@string/first"
+                            android:imeOptions="actionNext"
+                            android:inputType="none"
+                            android:paddingStart="@dimen/_10sdp"
+                            android:singleLine="true"
+                            android:text="@{jobobj.firstname}"
+                            android:textAlignment="viewStart"
+                            android:textSize="14sp" />
+
+
+                        <woopy.com.juanmckenzie.caymanall.views.EditTextC
+                            android:id="@+id/lastname"
+                            android:layout_width="match_parent"
+                            android:layout_height="44dp"
+                            android:layout_marginTop="10dp"
+                            android:hint="@string/last"
+                            android:imeOptions="actionNext"
+                            android:inputType="none"
+                            android:paddingStart="@dimen/_10sdp"
+                            android:singleLine="true"
+                            android:text="@{jobobj.lastname}"
+                            android:textAlignment="viewStart"
+                            android:textSize="14sp" />
+
+
+                        <woopy.com.juanmckenzie.caymanall.views.EditTextC
+                            android:id="@+id/middlename"
+                            android:layout_width="match_parent"
+                            android:layout_height="44dp"
+                            android:layout_marginTop="10dp"
+                            android:hint="@string/middle"
+                            android:imeOptions="actionNext"
+                            android:inputType="none"
+                            android:paddingStart="@dimen/_10sdp"
+                            android:singleLine="true"
+                            android:text="@{jobobj.middlename}"
+                            android:textAlignment="viewStart"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    app:cardCornerRadius="@dimen/_3sdp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="@dimen/_10sdp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:text="@string/address"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="@dimen/_12sdp"
+                            android:textStyle="bold" />
+
+                        <woopy.com.juanmckenzie.caymanall.views.EditTextC
+                            android:id="@+id/StreetAddress"
+                            android:layout_width="match_parent"
+                            android:layout_height="44dp"
+                            android:layout_marginTop="10dp"
+                            android:hint="@string/street_address"
+                            android:imeOptions="actionNext"
+                            android:inputType="none"
+                            android:paddingStart="@dimen/_10sdp"
+                            android:singleLine="true"
+                            android:text="@{jobobj.StreetAddress}"
+                            android:textAlignment="viewStart"
+                            android:textSize="14sp" />
+
+
+                        <woopy.com.juanmckenzie.caymanall.views.EditTextC
+                            android:id="@+id/ApartmentUnit"
+                            android:layout_width="match_parent"
+                            android:layout_height="44dp"
+                            android:layout_marginTop="10dp"
+                            android:hint="@string/apartment_unit"
+                            android:imeOptions="actionNext"
+                            android:inputType="none"
+                            android:paddingStart="@dimen/_10sdp"
+                            android:singleLine="true"
+                            android:text="@{jobobj.ApartmentUnit}"
+                            android:textAlignment="viewStart"
+                            android:textSize="14sp" />
+
+
+                        <woopy.com.juanmckenzie.caymanall.views.EditTextC
+                            android:id="@+id/City"
+                            android:layout_width="match_parent"
+                            android:layout_height="44dp"
+                            android:layout_marginTop="10dp"
+                            android:hint="@string/city"
+                            android:imeOptions="actionNext"
+                            android:inputType="none"
+                            android:paddingStart="@dimen/_10sdp"
+                            android:singleLine="true"
+                            android:text="@{jobobj.City}"
+                            android:textAlignment="viewStart"
+                            android:textSize="14sp" />
+
+
+                        <woopy.com.juanmckenzie.caymanall.views.EditTextC
+                            android:id="@+id/State"
+                            android:layout_width="match_parent"
+                            android:layout_height="44dp"
+                            android:layout_marginTop="10dp"
+                            android:hint="@string/state"
+                            android:imeOptions="actionNext"
+                            android:inputType="none"
+                            android:paddingStart="@dimen/_10sdp"
+                            android:singleLine="true"
+                            android:text="@{jobobj.State}"
+                            android:textAlignment="viewStart"
+                            android:textSize="14sp" />
+
+
+                        <woopy.com.juanmckenzie.caymanall.views.EditTextC
+                            android:id="@+id/ZIPCode"
+                            android:layout_width="match_parent"
+                            android:layout_height="44dp"
+                            android:layout_marginTop="10dp"
+                            android:hint="@string/zip_code"
+                            android:imeOptions="actionNext"
+                            android:inputType="text"
+                            android:paddingStart="@dimen/_10sdp"
+                            android:singleLine="true"
+                            android:text="@{jobobj.ZIPCode}"
+                            android:textAlignment="viewStart"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    app:cardCornerRadius="@dimen/_3sdp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="@dimen/_10sdp">
+
+                        <woopy.com.juanmckenzie.caymanall.views.TextViewC
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/phone_number"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="@dimen/_12sdp"
+                            android:textStyle="bold" />
+
+                        <woopy.com.juanmckenzie.caymanall.views.EditTextC
+                            android:id="@+id/PhoneNumber"
+                            android:layout_width="match_parent"
+                            android:layout_height="44dp"
+                            android:layout_marginTop="10dp"
+                            android:hint="@string/_000000000"
+                            android:imeOptions="actionNext"
+                            android:inputType="number"
+                            android:paddingStart="@dimen/_10sdp"
+                            android:singleLine="true"
+                            android:text="@{jobobj.phone}"
+                            android:textAlignment="viewStart"
+                            android:textSize="14sp" />
+
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    app:cardCornerRadius="@dimen/_3sdp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="@dimen/_10sdp">
+
+                        <woopy.com.juanmckenzie.caymanall.views.TextViewC
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/email1"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="@dimen/_12sdp"
+                            android:textStyle="bold" />
+
+
+                        <woopy.com.juanmckenzie.caymanall.views.EditTextC
+                            android:id="@+id/Email"
+                            android:layout_width="match_parent"
+                            android:layout_height="44dp"
+                            android:layout_marginTop="10dp"
+                            android:hint="@string/abc_xyz_com"
+                            android:imeOptions="actionNext"
+                            android:inputType="textEmailAddress"
+                            android:paddingStart="@dimen/_10sdp"
+                            android:singleLine="true"
+                            android:text="@{jobobj.email}"
+                            android:textAlignment="viewStart"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    app:cardCornerRadius="@dimen/_3sdp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="@dimen/_10sdp">
+
+                        <woopy.com.juanmckenzie.caymanall.views.TextViewC
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/date_available"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="@dimen/_12sdp"
+                            android:textStyle="bold" />
+
+                        <io.blackbox_vision.datetimepickeredittext.view.DatePickerInputEditText
+                            android:id="@+id/DateAvailable"
+                            android:layout_width="match_parent"
+                            android:layout_height="44dp"
+                            android:layout_marginTop="10dp"
+                            android:hint="@string/_00_00_0000"
+                            android:imeOptions="actionNext"
+                            android:inputType="text"
+                            android:paddingStart="@dimen/_10sdp"
+                            android:singleLine="true"
+                            android:text="@{jobobj.dateAvailable}"
+                            android:textAlignment="viewStart"
+                            android:textSize="14sp" />
+
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    app:cardCornerRadius="@dimen/_3sdp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="@dimen/_10sdp">
+
+                        <woopy.com.juanmckenzie.caymanall.views.TextViewC
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/desired_salary"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="@dimen/_12sdp"
+                            android:textStyle="bold" />
+
+
+                        <woopy.com.juanmckenzie.caymanall.views.EditTextC
+                            android:id="@+id/DesiredSalary"
+                            android:layout_width="match_parent"
+                            android:layout_height="44dp"
+                            android:layout_marginTop="10dp"
+                            android:hint="@string/_0000_0000"
+                            android:imeOptions="actionNext"
+                            android:inputType="text"
+                            android:paddingStart="@dimen/_10sdp"
+                            android:singleLine="true"
+                            android:text="@{jobobj.desredsallery}"
+                            android:textAlignment="viewStart"
+                            android:textSize="14sp" />
+
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    app:cardCornerRadius="@dimen/_3sdp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="@dimen/_10sdp">
+
+                        <woopy.com.juanmckenzie.caymanall.views.TextViewC
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/position_applied_for"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="@dimen/_12sdp"
+                            android:textStyle="bold" />
+
+
+                        <woopy.com.juanmckenzie.caymanall.views.EditTextC
+                            android:id="@+id/PositionAppliedfor"
+                            android:layout_width="match_parent"
+                            android:layout_height="44dp"
+                            android:layout_marginTop="10dp"
+                            android:hint="@string/manager_etc"
+                            android:imeOptions="actionDone"
+                            android:inputType="text"
+                            android:paddingStart="@dimen/_10sdp"
+                            android:singleLine="true"
+                            android:text="@{jobobj.positonforApplied}"
+                            android:textAlignment="viewStart"
+                            android:textSize="14sp" />
+
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    app:cardCornerRadius="@dimen/_3sdp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="@dimen/_10sdp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:text="@string/are_you_a_citizen_of_the_united_states"
+                            android:textColor="@color/gray"
+                            android:textSize="@dimen/_12sdp" />
+
+                        <lib.kingja.switchbutton.SwitchMultiButton
+                            android:id="@+id/question1from1"
+                            android:layout_width="match_parent"
+                            android:layout_height="45dp"
+                            android:layout_marginTop="10dp"
+                            android:padding="8dp"
+                            app:selectedColor="@color/colorPrimary"
+                            app:selectedTab="0"
+                            app:strokeRadius="1dp"
+                            app:strokeWidth="1dp"
+                            app:switchTabs="@array/switch_tabs"
+                            app:textSize="13sp" />
+
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:text="@string/if_no_are_you_authorized_to_work_in_the_u_s"
+                            android:textColor="@color/gray"
+                            android:textSize="@dimen/_12sdp" />
+
+
+                        <lib.kingja.switchbutton.SwitchMultiButton
+                            android:id="@+id/question2from1"
+                            android:layout_width="match_parent"
+                            android:layout_height="45dp"
+                            android:layout_marginTop="10dp"
+                            android:padding="8dp"
+                            app:selectedColor="@color/colorPrimary"
+                            app:selectedTab="0"
+                            app:strokeRadius="1dp"
+                            app:strokeWidth="1dp"
+                            app:switchTabs="@array/switch_tabs"
+                            app:textSize="13sp" />
+
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:text="@string/have_you_ever_worked_for_this_company"
+                            android:textColor="@color/gray"
+                            android:textSize="@dimen/_12sdp" />
+
+
+                        <lib.kingja.switchbutton.SwitchMultiButton
+                            android:id="@+id/question3from1"
+                            android:layout_width="match_parent"
+                            android:layout_height="45dp"
+                            android:layout_marginTop="10dp"
+                            android:padding="8dp"
+                            app:selectedColor="@color/colorPrimary"
+                            app:selectedTab="0"
+                            app:strokeRadius="1dp"
+                            app:strokeWidth="1dp"
+                            app:switchTabs="@array/switch_tabs"
+                            app:textSize="13sp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:text="@string/have_you_ever_been_convicted_of_a_felony"
+                            android:textColor="@color/gray"
+                            android:textSize="@dimen/_12sdp" />
+
+
+                        <lib.kingja.switchbutton.SwitchMultiButton
+                            android:id="@+id/question4from1"
+                            android:layout_width="match_parent"
+                            android:layout_height="45dp"
+                            android:layout_marginTop="10dp"
+                            android:padding="8dp"
+                            app:selectedColor="@color/colorPrimary"
+                            app:selectedTab="0"
+                            app:strokeRadius="1dp"
+                            app:strokeWidth="1dp"
+                            app:switchTabs="@array/switch_tabs"
+                            app:textSize="13sp" />
+
+
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+
+                <Button
+                    android:id="@+id/Next"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_below="@+id/fullnameTxt"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/colorPrimary"
+                    android:text="@string/continuebutton"
+                    android:textColor="#fff"
+                    android:textSize="16sp"
+                    android:textStyle="normal|bold"
+                    android:visibility="gone" />
+
+
+            </LinearLayout>
+        </ScrollView>
+
+
+    </LinearLayout>
+
+</layout>

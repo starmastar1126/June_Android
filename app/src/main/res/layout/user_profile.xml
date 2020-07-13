@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UserProfile">
+
+
+    <RelativeLayout
+        android:id="@+id/upTopView"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@color/colorPrimary">
+
+        <Button
+            android:id="@+id/upOptionsButt"
+            android:layout_width="44dp"
+            android:visibility="invisible"
+            android:layout_height="44dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:background="@android:color/transparent"
+            android:text="•••"
+            android:textColor="#fff"
+            android:textSize="18dp" />
+
+        <TextView
+            android:id="@+id/upUsernameTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:gravity="center_vertical"
+            android:text="@string/loading"
+            android:textColor="#fff"
+            android:textStyle="normal|bold" />
+
+
+        <Button
+            android:id="@+id/upBackButt"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:layout_alignBaseline="@+id/upOptionsButt"
+            android:layout_alignBottom="@+id/upOptionsButt"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="18dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/back_butt" />
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/upTopView"
+        android:padding="@dimen/_5sdp">
+
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/upAvatarImg"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="11dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="11dp"
+            android:src="@drawable/logo" />
+
+
+        <TextView
+            android:id="@+id/upFullNameTxt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/upAvatarImg"
+            android:layout_marginLeft="10dp"
+            android:layout_toEndOf="@+id/upAvatarImg"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:text="@string/loading"
+            android:textColor="#333"
+            android:textStyle="normal|bold" />
+
+        <TextView
+            android:id="@+id/upJoinedTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/upFullNameTxt"
+            android:layout_alignStart="@+id/upFullNameTxt"
+            android:layout_marginTop="5dp"
+            android:text="@string/joined"
+            android:textSize="11sp" />
+
+        <TextView
+            android:id="@+id/upVerifiedTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/upJoinedTxt"
+            android:layout_alignStart="@+id/upJoinedTxt"
+            android:layout_marginTop="5dp"
+            android:text="@string/verified"
+            android:textSize="11sp" />
+
+
+        <com.google.android.gms.ads.AdView
+            android:id="@+id/admobBanner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            ads:adSize="BANNER"
+            ads:adUnitId="@string/ADMOB_BANNER_UNIT_ID"></com.google.android.gms.ads.AdView>
+
+        <ListView
+            android:id="@+id/upUserAdsListView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/admobBanner"
+            android:layout_below="@+id/upAdsposted"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:divider="#e5e5e5"
+            android:dividerHeight="1dp" />
+
+        <Button
+            android:id="@+id/upCheckFeedbacksButt"
+            android:layout_width="100dp"
+            android:layout_height="36dp"
+            android:layout_alignTop="@+id/upJoinedTxt"
+            android:layout_alignEnd="@+id/upFullNameTxt"
+            android:layout_marginStart="95dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginEnd="34dp"
+            android:layout_toEndOf="@+id/upJoinedTxt"
+            android:background="@android:color/transparent"
+            android:gravity="end|center"
+            android:paddingBottom="5dp"
+            android:text="@string/check_feedbacks"
+            android:textAllCaps="false"
+            android:textColor="@color/main_color"
+            android:textSize="12sp"
+            android:textStyle="normal|bold" />
+
+        <TextView
+            android:id="@+id/upAboutTxt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/upAvatarImg"
+            android:layout_alignStart="@+id/upAvatarImg"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginRight="10dp"
+            android:maxLines="4"
+            android:text="@string/loading"
+            android:textSize="10sp" />
+
+        <TextView
+            android:id="@+id/upAdsposted"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/upAboutTxt"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="15dp"
+            android:text="@string/ads_posted"
+            android:textAlignment="center"
+            android:textColor="#333"
+            android:textSize="12sp"
+            android:textStyle="normal|bold" />
+
+        <Button
+            android:id="@+id/upWebButt"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_below="@+id/upVerifiedTxt"
+            android:layout_alignStart="@+id/upVerifiedTxt"
+            android:background="@android:color/transparent"
+            android:fontFamily="sans-serif"
+            android:text="@string/loading"
+            android:textAlignment="textStart"
+            android:textAllCaps="false"
+            android:textColor="#777"
+            android:textSize="11sp" />
+
+
+    </RelativeLayout>
+</RelativeLayout>

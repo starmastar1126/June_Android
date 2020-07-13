@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:map="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusableInTouchMode="true"
+    tools:context=".DistanceMapActivity">
+
+
+    <RelativeLayout
+        android:id="@+id/mapTopView"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:background="@color/colorPrimary">
+
+
+        <Button
+            android:id="@+id/mapApplyButt"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:background="@android:color/transparent"
+            android:text="@string/apply"
+            android:textAllCaps="false"
+            android:textColor="#fff"
+            android:textSize="12dp" />
+
+        <Button
+            android:id="@+id/mapBackButt"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:layout_alignBaseline="@+id/mapApplyButt"
+            android:layout_alignBottom="@+id/mapApplyButt"
+            android:layout_alignParentStart="true"
+            android:layout_marginLeft="10dp"
+            android:background="@android:color/transparent"
+            android:text="@string/cancel"
+            android:textAllCaps="false"
+            android:textColor="#fff"
+            android:textSize="12dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:gravity="center_vertical"
+            android:text="@string/set_distance"
+            android:textColor="#fff"
+            android:textStyle="normal|bold" />
+    </RelativeLayout>
+
+
+    <fragment
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_above="@+id/mapDistanceTxt"
+        android:layout_below="@+id/mapTopView"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="10dp"
+        tools:context=".DistanceMapActivity" />
+
+    <SeekBar
+        android:id="@+id/mapDistanceSeekBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="10dp"
+        android:max="200"
+        android:progressBackgroundTint="@color/colorPrimary"
+        android:progressTint="#333"
+        android:thumbTint="@color/colorPrimary" />
+
+    <TextView
+        android:id="@+id/mapDistanceTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/mapDistanceSeekBar"
+        android:layout_alignEnd="@+id/mapDistanceSeekBar"
+        android:layout_alignBottom="@+id/mapDistanceSeekBar"
+        android:layout_marginBottom="20dp"
+        android:fontFamily="sans-serif-condensed"
+        android:text="@string/_50_miles_around_your_location"
+        android:textAlignment="center"
+        android:textColor="#555"
+        android:textSize="14sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:layout_below="@+id/mapTopView"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="20dp"
+        android:background="#fff"
+        android:orientation="horizontal"
+        android:weightSum="1">
+
+        <com.seatgeek.placesautocomplete.PlacesAutocompleteTextView
+            android:id="@+id/dmSearchTxt"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/mapTopView"
+            android:layout_alignStart="@+id/mapDistanceTxt"
+            android:layout_marginLeft="5dp"
+            android:layout_weight="1"
+            android:ems="10"
+            android:hint="@string/type_a_location_and_hit_search"
+            android:imeOptions="actionSearch"
+            android:inputType="text"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:textSize="12sp"
+            app:pacv_googleMapsApiKey="AIzaSyAl_KkpIB-kNu2GIhc4Kxejd0DDESQWMRM" />
+
+        <Button
+            android:id="@+id/dmCurrLocationButt"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:layout_marginLeft="30dp"
+            android:background="@drawable/curr_location_butt"
+            android:visibility="gone" />
+    </LinearLayout>
+</RelativeLayout>

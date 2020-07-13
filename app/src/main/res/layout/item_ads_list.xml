@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cardvirew"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/_5sdp"
+    app:cardCornerRadius="@dimen/_3sdp"
+    app:cardElevation="@dimen/_1sdp">
+
+    <RelativeLayout
+        android:id="@+id/mainlayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/ial_image_iv"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:contentDescription="@null"
+            android:alpha="0.9"
+            android:cropToPadding="true"
+            android:scaleType="centerCrop" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:gravity="center">
+
+            <ProgressBar
+                android:id="@+id/ibc_loading_pb"
+                style="?android:attr/progressBarStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:indeterminateTint="@color/colorPrimary" />
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/price"
+            android:background="@color/color_primary_dark"
+            android:layout_width="wrap_content"
+            android:textColor="@color/white"
+            android:layout_alignParentEnd="true"
+            android:paddingStart="@dimen/_10sdp"
+            android:paddingEnd="@dimen/_10sdp"
+            android:paddingTop="@dimen/_5sdp"
+            android:paddingBottom="@dimen/_5sdp"
+            android:text="$100"
+            android:layout_height="wrap_content"/>
+
+
+        <ImageView
+            android:id="@+id/Sold"
+            android:layout_width="wrap_content"
+            android:layout_height="120dp"
+            android:alpha="0.5"
+            android:src="@drawable/sold3"
+            android:visibility="invisible" />
+        <ImageView
+            android:id="@+id/permium"
+            android:layout_width="@dimen/_25sdp"
+            android:layout_height="@dimen/_25sdp"
+            android:alpha="0.5"
+            android:src="@drawable/premium"
+            android:visibility="invisible" />
+
+        <TextView
+            android:id="@+id/ial_price_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/ial_image_iv"
+            android:alpha="0"
+            android:background="@color/darkOverlay"
+            android:ellipsize="end"
+            android:paddingStart="16dp"
+            android:paddingTop="8dp"
+            android:paddingEnd="16dp"
+            android:paddingBottom="8dp"
+            android:singleLine="true"
+            android:textColor="@color/white"
+            android:textSize="17sp"
+            android:visibility="gone"
+            tools:text="7 700" />
+
+        <TextView
+            android:id="@+id/banner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/ial_image_iv"
+            android:layout_alignParentEnd="true"
+            android:alpha="0"
+            android:background="@color/darkOverlay"
+            android:ellipsize="end"
+            android:paddingStart="16dp"
+            android:paddingTop="8dp"
+            android:paddingEnd="16dp"
+            android:paddingBottom="8dp"
+            android:singleLine="true"
+            android:textColor="@color/white"
+            android:textSize="17sp"
+            android:visibility="gone"
+            tools:text="7 700" />
+
+        <TextView
+            android:id="@+id/ial_title_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ial_image_iv"
+            android:ellipsize="end"
+            android:lines="1"
+            android:maxLines="1"
+            android:paddingStart="16dp"
+            android:paddingTop="8dp"
+            android:paddingEnd="16dp"
+            android:paddingBottom="8dp"
+            android:textColor="@color/black"
+            android:textSize="15sp" />
+    </RelativeLayout>
+
+    <com.smarteist.autoimageslider.SliderView
+        android:id="@+id/image"
+        android:layout_width="match_parent"
+        android:layout_below="@+id/fa_verified_title_tv"
+        android:layout_height="match_parent"
+        app:sliderAutoCycleDirection="back_and_forth"
+        app:sliderAutoCycleEnabled="true"
+        android:visibility="gone"
+        app:sliderCircularHandlerEnabled="true"
+        app:sliderIndicatorGravity="center_horizontal|bottom"
+        app:sliderIndicatorMargin="15dp"
+        app:sliderIndicatorOrientation="horizontal"
+        app:sliderIndicatorPadding="3dp"
+        app:sliderIndicatorRadius="2dp"
+        app:sliderIndicatorSelectedColor="@android:color/transparent"
+        app:sliderIndicatorUnselectedColor="@android:color/transparent"
+        app:sliderScrollTimeInSec="6"
+        app:sliderStartAutoCycle="true" />
+
+</androidx.cardview.widget.CardView>

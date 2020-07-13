@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/sign_up"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/login_bkg"
+    android:focusableInTouchMode="true"
+    tools:context=".landing.SignUp">
+
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="800dp">
+
+                <Button
+                    android:id="@+id/signupDismissButt"
+                    android:layout_width="44dp"
+                    android:layout_height="44dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/dismiss_butt" />
+
+                <EditText
+                    android:id="@+id/usernameTxt2"
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="220dp"
+                    android:layout_marginRight="30dp"
+                    android:background="#96333333"
+                    android:hint="@string/choose_a_username"
+                    android:imeOptions="actionNext"
+                    android:inputType="none"
+                    android:paddingLeft="44dp"
+                    android:singleLine="true"
+                    android:textAlignment="viewStart"
+                    android:textColor="#fff"
+                    android:textColorHint="#f1f1f1"
+                    android:textSize="14sp" />
+
+                <EditText
+                    android:id="@+id/passwordTxt2"
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:layout_below="@+id/usernameTxt2"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="30dp"
+                    android:background="#96333333"
+                    android:hint="@string/choose_a_password"
+                    android:imeOptions="actionNext"
+                    android:inputType="textPassword"
+                    android:paddingLeft="44dp"
+                    android:singleLine="true"
+                    android:textAlignment="viewStart"
+                    android:textColor="#fff"
+                    android:textColorHint="#f1f1f1"
+                    android:textSize="14sp" />
+
+                <EditText
+                    android:id="@+id/emailTxt2"
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:layout_below="@+id/passwordTxt2"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="30dp"
+                    android:background="#96333333"
+                    android:hint="@string/type_your_email_address"
+                    android:imeOptions="actionNext"
+                    android:inputType="textEmailAddress"
+                    android:paddingLeft="44dp"
+                    android:singleLine="true"
+                    android:textAlignment="viewStart"
+                    android:textColor="#fff"
+                    android:textColorHint="#f1f1f1"
+                    android:textSize="14sp" />
+
+                <EditText
+                    android:id="@+id/fullnameTxt"
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:layout_below="@+id/emailTxt2"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="11dp"
+                    android:layout_marginRight="30dp"
+                    android:background="#96333333"
+                    android:hint="@string/type_your_full_name"
+                    android:imeOptions="actionDone"
+                    android:inputType="none"
+                    android:paddingLeft="44dp"
+                    android:singleLine="true"
+                    android:textAlignment="viewStart"
+                    android:textColor="#fff"
+                    android:textColorHint="#f1f1f1"
+                    android:textSize="14sp" />
+
+
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:layout_below="@+id/fullnameTxt"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="11dp"
+                    android:layout_marginRight="30dp"
+                    android:background="#96333333"
+                    android:imeOptions="actionDone"
+                    android:inputType="none"
+                    android:orientation="horizontal"
+                    android:singleLine="true"
+                    android:textAlignment="viewStart"
+                    android:textColor="#fff"
+                    android:textColorHint="#f1f1f1"
+                    android:textSize="14sp">
+
+                    <RadioButton
+                        android:id="@+id/Male"
+                        android:layout_width="wrap_content"
+                        android:layout_height="44dp"
+                        android:layout_alignStart="@+id/signUpButt2"
+                        android:layout_alignTop="@+id/touButt"
+                        android:buttonTint="@android:color/white"
+                        android:paddingEnd="@dimen/_20sdp"
+                        android:text="@string/male"
+                        android:textColor="@android:color/white" />
+
+                    <RadioButton
+                        android:id="@+id/Female"
+                        android:layout_width="wrap_content"
+                        android:layout_height="44dp"
+                        android:layout_alignStart="@+id/signUpButt2"
+                        android:layout_alignTop="@+id/touButt"
+                        android:buttonTint="@android:color/white"
+                        android:paddingEnd="@dimen/_20sdp"
+                        android:text="@string/female"
+                        android:textColor="@android:color/white" />
+
+                </RadioGroup>
+
+                <Button
+                    android:id="@+id/touButt"
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:layout_below="@+id/signUpButt2"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="73dp"
+                    android:layout_marginLeft="70dp"
+                    android:layout_marginTop="-104dp"
+                    android:layout_marginRight="30dp"
+                    android:background="@android:color/transparent"
+                    android:text="@string/i_agree_to_terms_of_service"
+                    android:textAlignment="textStart"
+                    android:textAllCaps="false"
+                    android:textColor="#fff"
+                    android:textSize="12sp" />
+
+                <Button
+                    android:id="@+id/signUpButt2"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_below="@+id/fullnameTxt"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="187dp"
+                    android:layout_marginRight="30dp"
+                    android:background="@color/colorPrimary"
+                    android:text="@string/sign_up"
+                    android:textColor="#fff"
+                    android:textSize="16sp"
+                    android:textStyle="normal|bold" />
+
+                <ImageView
+                    android:layout_width="44dp"
+                    android:layout_height="44dp"
+                    android:layout_alignStart="@+id/usernameTxt2"
+                    android:layout_alignTop="@+id/usernameTxt2"
+                    app:srcCompat="@drawable/mini_user" />
+
+                <ImageView
+                    android:layout_width="44dp"
+                    android:layout_height="44dp"
+                    android:layout_alignStart="@+id/passwordTxt2"
+                    android:layout_alignTop="@+id/passwordTxt2"
+                    app:srcCompat="@drawable/mini_lock" />
+
+                <ImageView
+                    android:layout_width="44dp"
+                    android:layout_height="44dp"
+                    android:layout_alignStart="@+id/emailTxt2"
+                    android:layout_alignTop="@+id/emailTxt2"
+                    app:srcCompat="@drawable/mini_email" />
+
+                <ImageView
+                    android:layout_width="44dp"
+                    android:layout_height="44dp"
+                    android:layout_alignStart="@+id/fullnameTxt"
+                    android:layout_alignTop="@+id/fullnameTxt"
+                    app:srcCompat="@drawable/mini_user" />
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/cadAvatarImg"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="50dp"
+                    android:layout_marginBottom="20dp"
+                    android:src="@drawable/singlelogo" />
+
+                <RelativeLayout
+                    android:layout_width="120dp"
+                    android:layout_height="44dp"
+                    android:layout_below="@+id/cadAvatarImg"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="2dp"
+                    android:background="#96333333">
+
+                    <Button
+                        android:id="@+id/signupCamButt"
+                        android:layout_width="44dp"
+                        android:layout_height="44dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:background="@drawable/cam_icon" />
+
+                    <Button
+                        android:id="@+id/signupGalleryButt"
+                        android:layout_width="44dp"
+                        android:layout_height="44dp"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentEnd="true"
+                        android:background="@drawable/library_icon" />
+                </RelativeLayout>
+
+                <Button
+                    android:id="@+id/supCheckBoxButt"
+                    android:layout_width="44dp"
+                    android:layout_height="44dp"
+                    android:layout_alignStart="@+id/signUpButt2"
+                    android:layout_alignTop="@+id/touButt"
+                    android:background="@drawable/checkbox_off" />
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</RelativeLayout>

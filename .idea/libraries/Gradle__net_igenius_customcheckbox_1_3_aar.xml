@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="Gradle: net.igenius:customcheckbox:1.3@aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/57842db057699264c5942b392e31d09e/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/57842db057699264c5942b392e31d09e/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/net.igenius/customcheckbox/1.3/84e0176d7d4103cb0e5a6c03901db7a637909ccc/customcheckbox-1.3-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="16dp"
+    android:layout_marginTop="16dp"
+    android:layout_marginRight="16dp"
+    android:orientation="vertical">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/user_profile_image_view"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="16dp"
+        android:src="@drawable/ic_public_white" />
+
+    <TextView
+        android:id="@+id/user_name_text_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="2dp"
+        android:layout_toEndOf="@id/user_profile_image_view"
+        android:layout_toRightOf="@id/user_profile_image_view"
+        android:textColor="@color/color_primary_text"
+        android:textSize="16sp"
+        tools:text="Chandan Sharma" />
+
+    <LinearLayout
+        android:id="@+id/rating_block"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/user_name_text_view"
+        android:layout_marginBottom="20dp"
+        android:layout_toEndOf="@id/user_profile_image_view"
+        android:layout_toRightOf="@id/user_profile_image_view">
+
+        <TextView
+            android:id="@+id/user_rating_time_age_text_view"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColor="@color/color_secondary_text"
+            android:textSize="14sp"
+            tools:text="in the last week" />
+
+        <me.zhanghai.android.materialratingbar.MaterialRatingBar
+            android:id="@+id/user_rating"
+            style="@style/Widget.MaterialRatingBar.RatingBar"
+            android:layout_width="wrap_content"
+            android:layout_height="18dp"
+            android:layout_gravity="end"
+            android:rating="1"
+            app:mrb_indeterminateTint="@color/colorPrimary"
+            app:mrb_progressTint="@color/colorPrimary" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/user_rating_description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rating_block"
+        android:layout_toEndOf="@id/user_profile_image_view"
+        android:layout_toRightOf="@id/user_profile_image_view"
+        android:textColor="@color/color_primary_text"
+        android:textSize="14sp"
+        tools:text="The Place was Awesome i love it i again visit this place" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/user_rating_description"
+        android:layout_marginTop="16dp"
+        android:background="@color/color_divider" />
+</RelativeLayout>

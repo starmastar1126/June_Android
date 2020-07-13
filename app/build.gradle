@@ -1,0 +1,136 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 29
+    dataBinding {
+        enabled = true
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    defaultConfig {
+        applicationId "com.juanmckenzie.CaymanAll"
+        minSdkVersion 21
+        targetSdkVersion 29
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        multiDexEnabled true
+
+        aaptOptions {
+            cruncherEnabled = false
+        }
+
+    }
+
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    dexOptions {
+        javaMaxHeapSize "4g"
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'androidx.multidex:multidex:2.0.0'
+    //noinspection GradleCompatible
+    implementation 'androidx.appcompat:appcompat:1.0.0'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'com.google.android.material:material:1.0.0'
+
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    testImplementation 'junit:junit:4.12'
+    implementation 'com.parse:parse-android:1.16.0'
+    implementation 'com.parse.bolts:bolts-android:1.4.0'
+    implementation 'de.hdodenhof:circleimageview:3.0.0'
+    implementation 'com.facebook.android:facebook-android-sdk:+'
+    implementation 'com.parse:parsefacebookutils-v4-android:1.10.3@aar'
+    implementation 'com.commit451:PhotoView:1.2.4'
+    implementation "com.mlsdev.animatedrv:library:2.0.0"
+    implementation 'com.paypal.sdk:paypal-android-sdk:2.16.0'
+    implementation 'nl.psdcompany:duo-navigation-drawer:2.0.8'
+
+
+    implementation 'com.github.yalantis:ucrop:2.2.3'
+
+
+    implementation 'com.wang.avi:library:2.1.3'
+    implementation 'com.intuit.sdp:sdp-android:1.0.3'
+    implementation 'com.github.bumptech.glide:glide:4.9.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.9.0'
+    implementation 'com.airbnb.android:lottie:3.0.1'
+    implementation 'com.android.volley:volley:1.1.0'
+    implementation 'com.tbuonomo.andrui:viewpagerdotsindicator:3.0.3'
+    implementation 'com.github.khizar1556.MKVideoPlayer:mkvideoplayer:0.1.5'
+    implementation "com.github.nekocode:Badge:2.1"
+    implementation 'com.isseiaoki:simplecropview:1.1.8'
+    implementation 'com.github.yesidlazaro:GmailBackground:1.2.0'
+    implementation 'com.github.nihad92:SwipeableCards:1.0.19'
+    implementation 'com.seatgeek:placesautocomplete:0.3-SNAPSHOT'
+    implementation 'com.eyalbira.loadingdots:loading-dots:1.0.2'
+    implementation 'com.github.devsideal:ReadMoreOption:1.0.0'
+    implementation 'pl.droidsonroids.gif:android-gif-drawable:1.2.18'
+    implementation 'com.joooonho:selectableroundedimageview:1.0.1'
+    implementation 'com.github.smarteist:autoimageslider:1.3.2'
+    implementation 'com.github.ibrahimsn98:NiceBottomBar:1.8'
+    implementation 'com.github.varunest:sparkbutton:1.0.6'
+    implementation 'net.igenius:customcheckbox:1.3'
+    implementation 'me.relex:circleindicator:2.1.4'
+    implementation 'com.rengwuxian.materialedittext:library:2.1.4'
+    implementation 'com.github.jumadeveloper:networkmanager:0.0.2'
+    implementation 'lib.kingja.switchbutton:switchbutton:1.1.8'
+    implementation 'me.shaohui.advancedluban:library:1.3.5'
+    implementation 'com.github.BlackBoxVision:datetimepicker-edittext:v0.4.0'
+    implementation 'com.github.ahmedewess:Badged-BottomNavigationBar:1.0'
+    implementation 'com.fxn769:pix:1.4.4'
+
+    implementation 'com.elyeproj.libraries:loaderviewlibrary:2.0.0'
+    implementation 'com.facebook.shimmer:shimmer:0.4.0'
+    implementation 'com.github.looa:ViewShadow:1.1.3'
+
+    implementation 'cat.ereza:customactivityoncrash:2.2.0'
+    implementation 'me.zhanghai.android.materialratingbar:library:1.0.2'
+
+    implementation 'com.google.android.gms:play-services-ads:18.0.0'
+    implementation 'com.google.android.gms:play-services-maps:17.0.0'
+    implementation 'com.google.android.gms:play-services-location:17.0.0'
+    implementation 'com.google.android.gms:play-services-auth:17.0.0'
+    implementation 'com.google.firebase:firebase-functions:16.3.0'
+
+
+    implementation 'com.google.firebase:firebase-core:17.0.0'
+    implementation 'com.google.firebase:firebase-messaging:19.0.1'
+
+    // (Recommended) Add Analytics
+    implementation 'com.google.firebase:firebase-analytics:17.2.0'
+
+    // Add dependency
+    implementation 'com.crashlytics.sdk.android:crashlytics:2.10.1'
+    implementation 'com.google.android.gms:play-services-places:17.0.0'
+    implementation 'com.google.code.gson:gson:2.7'
+    implementation 'com.squareup.retrofit2:retrofit:2.1.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.1.0'
+    implementation 'com.squareup.okhttp3:logging-interceptor:3.4.1'
+    implementation 'com.squareup.okhttp3:okhttp:3.4.1'
+    implementation "com.squareup.picasso:picasso:2.4.0"
+    implementation 'com.github.anonymous-ME:TagsEditText:0.5.0'
+    implementation 'me.gujun.android.taggroup:library:1.4@aar'
+
+
+    implementation 'com.google.firebase:firebase-auth:18.0.0'
+    implementation 'com.google.firebase:firebase-database:19.2.0'
+    implementation 'com.google.firebase:firebase-storage:18.0.0'
+    implementation 'com.google.firebase:firebase-invites:17.0.0'
+    implementation 'com.google.firebase:firebase-dynamic-links:18.0.0'
+
+}
+apply plugin: 'io.fabric'
+
+apply plugin: 'com.google.gms.google-services'

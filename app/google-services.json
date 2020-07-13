@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "1072714170001",
+    "firebase_url": "https://caymanall.firebaseio.com",
+    "project_id": "caymanall",
+    "storage_bucket": "caymanall.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1072714170001:android:475723233c7deeab",
+        "android_client_info": {
+          "package_name": "com.juanmckenzie.CaymanAll"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1072714170001-hg6msaajpb6v9q0ut8hbe0c2kfu3sisd.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBVAru6etVEnSugcamSWfnzwLY5RMCbjXA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1072714170001-hg6msaajpb6v9q0ut8hbe0c2kfu3sisd.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

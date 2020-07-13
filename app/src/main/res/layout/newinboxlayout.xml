@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusableInTouchMode="true"
+    tools:context=".InboxActivity">
+
+
+    <RelativeLayout
+        android:id="@+id/inTopView"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@color/colorPrimary">
+
+
+        <TextView
+            android:id="@+id/inUsernameTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:gravity="center_vertical"
+            android:text="@string/username3"
+            android:textAlignment="center"
+            android:textColor="#fff"
+            android:textStyle="normal|bold" />
+
+        <Button
+            android:id="@+id/inBackButt"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/back_butt"
+            android:textAllCaps="false"
+            android:textColor="#fff"
+            android:textSize="12sp" />
+
+        <Button
+            android:id="@+id/inOptionsButt"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:layout_alignTop="@+id/inBackButt"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="11dp"
+            android:layout_marginRight="10dp"
+            android:background="@android:color/transparent"
+            android:text="@string/options_dots"
+            android:textAllCaps="false"
+            android:textColor="#fff"
+            android:textSize="18sp"
+            android:textStyle="normal|bold" />
+
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/inAdBoxLayout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/inTopView"
+        android:layout_alignParentStart="true"
+        android:background="@color/grayBg">
+
+        <ImageView
+            android:id="@+id/userimage"
+            android:layout_width="46dp"
+            android:layout_height="46dp"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="10dp"
+            android:scaleType="centerCrop"
+            ads:srcCompat="@drawable/logo" />
+
+        <TextView
+            android:id="@+id/username"
+            android:layout_width="220dp"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/userimage"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_toEndOf="@+id/userimage"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:text="@string/loading"
+            android:textColor="#555"
+            android:textSize="12sp"
+            android:textStyle="normal|bold" />
+
+        <TextView
+            android:id="@+id/gender"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/username"
+            android:layout_alignStart="@+id/username"
+            android:layout_marginTop="5dp"
+            android:text="@string/loading"
+            android:textSize="12sp" />
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentEnd="true"
+            ads:srcCompat="@drawable/discluse_indicator" />
+    </RelativeLayout>
+
+
+    <com.eyalbira.loadingdots.LoadingDots
+        android:id="@+id/dost"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/inBottomLayout"
+        android:padding="10dp"
+        android:visibility="visible"
+        app:LoadingDots_auto_play="true"
+        app:LoadingDots_dots_color="@color/colorPrimary"
+        app:LoadingDots_dots_count="4"
+        app:LoadingDots_dots_size="6dp"
+        app:LoadingDots_dots_space="5dp"
+        app:LoadingDots_jump_duration="100"
+        app:LoadingDots_jump_height="3dp"
+        app:LoadingDots_loop_duration="400"
+        app:LoadingDots_loop_start_delay="100" />
+
+    <RelativeLayout
+        android:id="@+id/inBottomLayout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_above="@+id/banner"
+        android:layout_alignParentStart="true"
+        android:background="@color/main_color">
+
+        <EditText
+            android:id="@+id/inMessageTxt"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentStart="true"
+            android:layout_toStartOf="@+id/inUploadPicButt"
+            android:background="@color/main_color"
+            android:hint="@string/type_your_message"
+            android:imeOptions="normal"
+            android:inputType="textMultiLine"
+            android:paddingLeft="10dp"
+            android:textColor="#fff"
+            android:textColorHint="#f1f1f1"
+            android:textSize="12sp" />
+
+        <Button
+            android:id="@+id/inSendButt"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/inMessageTxt"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:background="@android:color/transparent"
+            android:text="@string/send"
+            android:textAllCaps="false"
+            android:textColor="#fff"
+            android:textSize="14sp"
+            android:textStyle="normal|bold" />
+
+        <Button
+            android:id="@+id/inUploadPicButt"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:layout_toStartOf="@+id/inSendButt"
+            android:background="@drawable/cam_icon" />
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/banner"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="@dimen/_20sdp"
+        android:layout_marginEnd="@dimen/_20sdp"
+        android:background="#82BFBEBE"
+        android:orientation="vertical">
+
+        <com.smarteist.autoimageslider.SliderView
+            android:id="@+id/imageSlider"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:background="@android:color/transparent"
+            app:sliderAnimationDuration="0"
+            app:sliderAutoCycleDirection="back_and_forth"
+            app:sliderAutoCycleEnabled="true"
+            app:sliderCircularHandlerEnabled="true"
+            app:sliderIndicatorGravity="center_horizontal|bottom"
+            app:sliderIndicatorMargin="15dp"
+            app:sliderIndicatorOrientation="vertical"
+            app:sliderIndicatorSelectedColor="@android:color/transparent"
+            app:sliderIndicatorUnselectedColor="@android:color/transparent"
+            app:sliderScrollTimeInSec="10"
+            app:sliderStartAutoCycle="true" />
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            ads:cardCornerRadius="@dimen/_1sdp">
+
+            <ImageView
+                android:id="@+id/ial_image_iv"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:cropToPadding="true" />
+
+            <TextView
+                android:id="@+id/ial_title_tv"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_alignParentBottom="true"
+                android:background="@drawable/shape1"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:lines="1"
+                android:maxLines="1"
+                android:paddingStart="16dp"
+                android:paddingTop="8dp"
+                android:paddingEnd="16dp"
+                android:paddingBottom="8dp"
+                android:text="Loading..."
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                android:visibility="gone"
+                tools:text="Toyota Auris" />
+        </androidx.cardview.widget.CardView>
+
+    </RelativeLayout>
+
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/admobBanner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:visibility="gone"
+        ads:adSize="BANNER"
+        ads:adUnitId="@string/ADMOB_BANNER_UNIT_ID"></com.google.android.gms.ads.AdView>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/inInboxListView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/inAdBoxLayout"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="135dp"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="10dp" />
+
+    <ImageView
+        android:id="@+id/inImagePreview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/inBottomLayout"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="4000dp"
+        android:background="#000"
+        android:scaleType="fitCenter"
+        android:visibility="gone"
+        ads:srcCompat="@drawable/logo" />
+
+
+</RelativeLayout>

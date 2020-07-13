@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="Gradle: com.github.ahmedewess:Badged-BottomNavigationBar:1.0@aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/9a2db88586ab43d932ca31809966a5bf/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/9a2db88586ab43d932ca31809966a5bf/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.ahmedewess/Badged-BottomNavigationBar/1.0/f09b3f81225372af9687ca7789edcea612b35fd0/Badged-BottomNavigationBar-1.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grayBg"
+    tools:context=".home.fragments.MyLikesActivity">
+
+    <RelativeLayout
+        android:id="@+id/feedsTopView"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@color/main_color">
+
+        <TextView
+            android:id="@+id/mlTitleTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:gravity="center_vertical"
+            android:text="@string/events"
+            android:textAlignment="center"
+            android:textColor="#fff"
+            android:textStyle="normal|bold" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/mlNoLikesLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/feedsTopView"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="@dimen/_50sdp"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/animation_view"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:gravity="center"
+            android:text="@string/events_will_be_displayed_here"
+            android:textAlignment="center"
+            android:textColor="@color/colorPrimary"
+            android:textSize="14sp"
+            android:textStyle="normal|bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/loading"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/alOptionsLayout"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <include layout="@layout/item_event_list_dummy" />
+
+        <include layout="@layout/item_event_list_dummy" />
+
+        <include layout="@layout/item_event_list_dummy" />
+
+        <include layout="@layout/item_event_list_dummy" />
+
+        <include layout="@layout/item_event_list_dummy" />
+
+        <include layout="@layout/item_event_list_dummy" />
+    </LinearLayout>
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/refreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/alOptionsLayout">
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/fml_likes_rv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:clipToPadding="false"
+            android:paddingBottom="55dp"
+            android:scrollbars="none" />
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+
+    <!--    <RelativeLayout-->
+    <!--        android:id="@+id/banner"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="60dp"-->
+    <!--        android:layout_alignParentBottom="true"-->
+    <!--        android:layout_centerHorizontal="true"-->
+    <!--        android:layout_marginStart="@dimen/_20sdp"-->
+    <!--        android:layout_marginEnd="@dimen/_20sdp"-->
+    <!--        android:background="#82BFBEBE"-->
+    <!--        android:orientation="vertical">-->
+
+
+    <!--        <com.smarteist.autoimageslider.SliderView-->
+    <!--            android:id="@+id/imageSlider"-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="match_parent"-->
+    <!--            android:background="@android:color/transparent"-->
+    <!--            app:sliderAnimationDuration="0"-->
+    <!--            app:sliderAutoCycleDirection="back_and_forth"-->
+    <!--            app:sliderAutoCycleEnabled="true"-->
+    <!--            app:sliderCircularHandlerEnabled="true"-->
+    <!--            app:sliderIndicatorGravity="center_horizontal|bottom"-->
+    <!--            app:sliderIndicatorMargin="15dp"-->
+    <!--            app:sliderIndicatorOrientation="vertical"-->
+    <!--            app:sliderIndicatorSelectedColor="@android:color/transparent"-->
+    <!--            app:sliderIndicatorUnselectedColor="@android:color/transparent"-->
+    <!--            app:sliderScrollTimeInSec="10"-->
+    <!--            app:sliderStartAutoCycle="true" />-->
+
+
+    <!--    </RelativeLayout>-->
+
+    <LinearLayout
+        android:id="@+id/alOptionsLayout"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_below="@+id/feedsTopView"
+        android:background="#82BFBEBE"
+        android:weightSum="1">
+
+        <RelativeLayout
+            android:id="@+id/aal_location_rl"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:paddingStart="8dp"
+            android:paddingTop="8dp"
+            android:paddingEnd="4dp">
+
+            <ImageView
+                android:id="@+id/imageView7"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_alignParentStart="true"
+                android:layout_marginEnd="4dp"
+                ads:srcCompat="@drawable/small_loc_icon" />
+
+            <TextView
+                android:id="@+id/alDistanceTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignEnd="@+id/alCityCountryTV"
+                android:layout_toEndOf="@+id/imageView7"
+                android:singleLine="true"
+                android:text="@string/loading"
+                android:textSize="11sp" />
+
+            <TextView
+                android:id="@+id/alCityCountryTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/alDistanceTxt"
+                android:layout_toEndOf="@+id/imageView7"
+                android:maxLines="2"
+                android:text="@string/new_york_usa"
+                android:textAllCaps="false"
+                android:textColor="#333"
+                android:textSize="12sp" />
+        </RelativeLayout>
+
+
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,409 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+        <variable
+            name="jobobj"
+            type="woopy.com.juanmckenzie.caymanall.formsjobs.modules.Formobject" />
+    </data>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:segmentedgroup="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/sign_up"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/grayBg"
+        android:focusableInTouchMode="true"
+        tools:context=".landing.SignUp">
+
+
+        <ScrollView
+            android:id="@+id/scrollView"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="@dimen/_10sdp">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    app:cardCornerRadius="@dimen/_3sdp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="@dimen/_10sdp">
+
+                        <woopy.com.juanmckenzie.caymanall.views.TextViewC
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/high_school"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="@dimen/_12sdp"
+                            android:textStyle="bold" />
+
+                        <woopy.com.juanmckenzie.caymanall.views.EditTextC
+                            android:id="@+id/hname"
+                            android:layout_width="match_parent"
+                            android:layout_height="44dp"
+                            android:layout_marginTop="10dp"
+                            android:hint="@string/name"
+                            android:imeOptions="actionNext"
+                            android:inputType="none"
+                            android:paddingStart="@dimen/_10sdp"
+                            android:singleLine="true"
+                            android:text="@{jobobj.hname}"
+                            android:textAlignment="viewStart"
+                            android:textSize="14sp" />
+
+
+                        <woopy.com.juanmckenzie.caymanall.views.EditTextC
+                            android:id="@+id/haddress"
+                            android:layout_width="match_parent"
+                            android:layout_height="44dp"
+                            android:layout_marginTop="10dp"
+                            android:hint="@string/address"
+                            android:imeOptions="actionNext"
+                            android:inputType="none"
+                            android:paddingStart="@dimen/_10sdp"
+                            android:singleLine="true"
+                            android:text="@{jobobj.haddress}"
+                            android:textAlignment="viewStart"
+                            android:textSize="14sp" />
+
+
+                        <io.blackbox_vision.datetimepickeredittext.view.DatePickerInputEditText
+                            android:id="@+id/hfrom"
+                            android:layout_width="match_parent"
+                            android:layout_height="44dp"
+                            android:layout_marginTop="10dp"
+                            android:hint="@string/from_00_00_0000"
+                            android:imeOptions="actionNext"
+                            android:inputType="text"
+                            android:paddingStart="@dimen/_10sdp"
+                            android:singleLine="true"
+                            android:text="@{jobobj.hfrom}"
+                            android:textAlignment="viewStart"
+                            android:textSize="14sp" />
+
+                        <io.blackbox_vision.datetimepickeredittext.view.DatePickerInputEditText
+                            android:id="@+id/hto"
+                            android:layout_width="match_parent"
+                            android:layout_height="44dp"
+                            android:layout_marginTop="10dp"
+                            android:hint="@string/to_00_00_0000"
+                            android:imeOptions="actionNext"
+                            android:inputType="text"
+                            android:paddingStart="@dimen/_10sdp"
+                            android:singleLine="true"
+                            android:text="@{jobobj.hto}"
+                            android:textAlignment="viewStart"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:text="@string/did_you_graduate"
+                            android:textColor="@color/gray"
+                            android:textSize="@dimen/_12sdp" />
+
+
+                        <lib.kingja.switchbutton.SwitchMultiButton
+                            android:id="@+id/question1form2"
+                            android:layout_width="match_parent"
+                            android:layout_height="45dp"
+                            android:layout_marginTop="10dp"
+                            android:padding="8dp"
+                            app:selectedColor="@color/colorPrimary"
+                            app:selectedTab="0"
+                            app:strokeRadius="1dp"
+                            app:strokeWidth="1dp"
+                            app:switchTabs="@array/switch_tabs"
+                            app:textSize="13sp" />
+
+                        <woopy.com.juanmckenzie.caymanall.views.EditTextC
+                            android:id="@+id/hdiploma"
+                            android:layout_width="match_parent"
+                            android:layout_height="44dp"
+                            android:layout_marginTop="10dp"
+                            android:hint="@string/diploma"
+                            android:imeOptions="actionDone"
+                            android:inputType="text"
+                            android:paddingStart="@dimen/_10sdp"
+                            android:singleLine="true"
+                            android:text="@{jobobj.hdeploma}"
+                            android:textAlignment="viewStart"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+
+
+                </androidx.cardview.widget.CardView>
+
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    app:cardCornerRadius="@dimen/_3sdp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="@dimen/_10sdp">
+
+                        <woopy.com.juanmckenzie.caymanall.views.TextViewC
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/college"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="@dimen/_12sdp"
+                            android:textStyle="bold" />
+
+                        <woopy.com.juanmckenzie.caymanall.views.EditTextC
+                            android:id="@+id/cname"
+                            android:layout_width="match_parent"
+                            android:layout_height="44dp"
+                            android:layout_marginTop="10dp"
+                            android:hint="@string/name"
+                            android:imeOptions="actionNext"
+                            android:inputType="none"
+                            android:paddingStart="@dimen/_10sdp"
+                            android:singleLine="true"
+                            android:text="@{jobobj.cname}"
+                            android:textAlignment="viewStart"
+                            android:textSize="14sp" />
+
+
+                        <woopy.com.juanmckenzie.caymanall.views.EditTextC
+                            android:id="@+id/caddresss"
+                            android:layout_width="match_parent"
+                            android:layout_height="44dp"
+                            android:layout_marginTop="10dp"
+                            android:hint="@string/address"
+                            android:imeOptions="actionNext"
+                            android:inputType="none"
+                            android:paddingStart="@dimen/_10sdp"
+                            android:singleLine="true"
+                            android:text="@{jobobj.caddress}"
+                            android:textAlignment="viewStart"
+                            android:textSize="14sp" />
+
+
+                        <io.blackbox_vision.datetimepickeredittext.view.DatePickerInputEditText
+                            android:id="@+id/cfrom"
+                            android:layout_width="match_parent"
+                            android:layout_height="44dp"
+                            android:layout_marginTop="10dp"
+                            android:hint="@string/from_00_00_0000"
+                            android:imeOptions="actionNext"
+                            android:inputType="text"
+                            android:paddingStart="@dimen/_10sdp"
+                            android:singleLine="true"
+                            android:text="@{jobobj.cfrom}"
+                            android:textAlignment="viewStart"
+                            android:textSize="14sp" />
+
+                        <io.blackbox_vision.datetimepickeredittext.view.DatePickerInputEditText
+                            android:id="@+id/cto"
+                            android:layout_width="match_parent"
+                            android:layout_height="44dp"
+                            android:layout_marginTop="10dp"
+                            android:hint="@string/to_00_00_0000"
+                            android:imeOptions="actionNext"
+                            android:inputType="text"
+                            android:paddingStart="@dimen/_10sdp"
+                            android:singleLine="true"
+                            android:text="@{jobobj.cto}"
+                            android:textAlignment="viewStart"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:text="@string/did_you_graduate"
+                            android:textColor="@color/gray"
+                            android:textSize="@dimen/_12sdp" />
+
+
+                        <lib.kingja.switchbutton.SwitchMultiButton
+                            android:id="@+id/question2from2"
+                            android:layout_width="match_parent"
+                            android:layout_height="45dp"
+                            android:layout_marginTop="10dp"
+                            android:padding="8dp"
+                            app:selectedColor="@color/colorPrimary"
+                            app:selectedTab="0"
+                            app:strokeRadius="1dp"
+                            app:strokeWidth="1dp"
+                            app:switchTabs="@array/switch_tabs"
+                            app:textSize="13sp" />
+
+                        <woopy.com.juanmckenzie.caymanall.views.EditTextC
+                            android:id="@+id/cdeploma"
+                            android:layout_width="match_parent"
+                            android:layout_height="44dp"
+                            android:layout_marginTop="10dp"
+                            android:hint="@string/diploma"
+                            android:imeOptions="actionDone"
+                            android:inputType="text"
+                            android:paddingStart="@dimen/_10sdp"
+                            android:singleLine="true"
+                            android:text="@{jobobj.cdeploma}"
+                            android:textAlignment="viewStart"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    app:cardCornerRadius="@dimen/_3sdp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="@dimen/_10sdp">
+
+                        <woopy.com.juanmckenzie.caymanall.views.TextViewC
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/other"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="@dimen/_12sdp"
+                            android:textStyle="bold" />
+
+                        <woopy.com.juanmckenzie.caymanall.views.EditTextC
+                            android:id="@+id/oname"
+                            android:layout_width="match_parent"
+                            android:layout_height="44dp"
+                            android:layout_marginTop="10dp"
+                            android:hint="@string/name"
+                            android:imeOptions="actionNext"
+                            android:inputType="none"
+                            android:paddingStart="@dimen/_10sdp"
+                            android:singleLine="true"
+                            android:text="@{jobobj.oname}"
+                            android:textAlignment="viewStart"
+                            android:textSize="14sp" />
+
+
+                        <woopy.com.juanmckenzie.caymanall.views.EditTextC
+                            android:id="@+id/oaddress"
+                            android:layout_width="match_parent"
+                            android:layout_height="44dp"
+                            android:layout_marginTop="10dp"
+                            android:hint="@string/address"
+                            android:imeOptions="actionNext"
+                            android:inputType="none"
+                            android:paddingStart="@dimen/_10sdp"
+                            android:singleLine="true"
+                            android:text="@{jobobj.oaddress}"
+                            android:textAlignment="viewStart"
+                            android:textSize="14sp" />
+
+
+                        <io.blackbox_vision.datetimepickeredittext.view.DatePickerInputEditText
+                            android:id="@+id/ofrom"
+                            android:layout_width="match_parent"
+                            android:layout_height="44dp"
+                            android:layout_marginTop="10dp"
+                            android:hint="@string/from_00_00_0000"
+                            android:imeOptions="actionNext"
+                            android:inputType="text"
+                            android:paddingStart="@dimen/_10sdp"
+                            android:singleLine="true"
+                            android:text="@{jobobj.ofrom}"
+                            android:textAlignment="viewStart"
+                            android:textSize="14sp" />
+
+                        <io.blackbox_vision.datetimepickeredittext.view.DatePickerInputEditText
+                            android:id="@+id/oto"
+                            android:layout_width="match_parent"
+                            android:layout_height="44dp"
+                            android:layout_marginTop="10dp"
+                            android:hint="@string/to_00_00_0000"
+                            android:imeOptions="actionNext"
+                            android:inputType="text"
+                            android:paddingStart="@dimen/_10sdp"
+                            android:singleLine="true"
+                            android:text="@{jobobj.oto}"
+                            android:textAlignment="viewStart"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:text="@string/did_you_graduate"
+                            android:textColor="@color/gray"
+                            android:textSize="@dimen/_12sdp" />
+
+
+                        <lib.kingja.switchbutton.SwitchMultiButton
+                            android:id="@+id/question3form2"
+                            android:layout_width="match_parent"
+                            android:layout_height="45dp"
+                            android:layout_marginTop="10dp"
+                            android:padding="8dp"
+                            app:selectedColor="@color/colorPrimary"
+                            app:selectedTab="0"
+                            app:strokeRadius="1dp"
+                            app:strokeWidth="1dp"
+                            app:switchTabs="@array/switch_tabs"
+                            app:textSize="13sp" />
+
+                        <woopy.com.juanmckenzie.caymanall.views.EditTextC
+                            android:id="@+id/odeploma"
+                            android:layout_width="match_parent"
+                            android:layout_height="44dp"
+                            android:layout_marginTop="10dp"
+                            android:hint="@string/diploma"
+                            android:imeOptions="actionDone"
+                            android:inputType="text"
+                            android:paddingStart="@dimen/_10sdp"
+                            android:singleLine="true"
+                            android:text="@{jobobj.odeploma}"
+                            android:textAlignment="viewStart"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+
+
+                </androidx.cardview.widget.CardView>
+
+                <Button
+                    android:id="@+id/next"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/colorPrimary"
+                    android:text="@string/continuebutton"
+                    android:textColor="#fff"
+                    android:textSize="16sp"
+                    android:textStyle="normal|bold"
+                    android:visibility="gone" />
+
+            </LinearLayout>
+        </ScrollView>
+
+
+    </LinearLayout>
+</layout>

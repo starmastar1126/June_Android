@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="Gradle: com.github.ibrahimsn98:NiceBottomBar:1.8@aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/04ae4a5a19370f53bc61f2e4c34d3249/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/04ae4a5a19370f53bc61f2e4c34d3249/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.ibrahimsn98/NiceBottomBar/1.8/25066a5a7b6d50bc5bec6e3fada0111135510a0a/NiceBottomBar-1.8-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

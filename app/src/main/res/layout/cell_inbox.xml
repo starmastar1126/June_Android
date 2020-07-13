@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/receiverCell"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_alignParentTop="true"
+        android:visibility="invisible">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/rAvatarImg"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="8dp"
+            android:background="@android:color/white"
+            android:src="@drawable/logo"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/rUsernameTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/rMessTxt"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_toStartOf="@+id/rAvatarImg"
+            android:gravity="end"
+            android:text="@string/loading"
+            android:textAlignment="textEnd"
+            android:textColor="#333"
+            android:textSize="17sp"
+            android:textStyle="normal|bold"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/rMessTxt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rAvatarImg"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/rounded_corner_receiver"
+            android:fontFamily="sans-serif-condensed"
+            android:paddingLeft="5dp"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:text="@string/loading"
+            android:textAlignment="textStart"
+            android:textColor="#333"
+            android:textSize="15sp" />
+
+
+        <LinearLayout
+            android:id="@+id/layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rMessTxt"
+            android:layout_alignEnd="@+id/rMessTxt"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:gravity="end|center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/rImage"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_marginLeft="80dp"
+                android:layout_alignStart="@+id/rMessTxt"
+                android:layout_marginEnd="5dp"
+                android:layout_marginRight="10dp"
+                android:layout_alignTop="@+id/rMessTxt"
+                android:layout_toStartOf="@+id/layout"
+                android:background="@drawable/rounded_corner_receiver"
+                android:scaleType="centerCrop"
+                android:visibility="visible"
+                app:srcCompat="@drawable/logo" />
+
+            <LinearLayout
+           android:layout_width="wrap_content"
+           android:orientation="horizontal"
+           android:layout_height="wrap_content">
+           <TextView
+               android:id="@+id/rDateTxt"
+               android:layout_width="wrap_content"
+               android:layout_height="@dimen/_20sdp"
+               android:layout_below="@+id/rMessTxt"
+               android:layout_alignEnd="@+id/rMessTxt"
+               android:gravity="center"
+               android:paddingEnd="@dimen/_10sdp"
+               android:text="loading..."
+               android:textColor="#333"
+               android:textSize="12sp" />
+
+           <ImageView
+               android:id="@+id/received"
+               android:layout_width="@dimen/_10sdp"
+               android:layout_height="@dimen/_20sdp"
+               android:src="@drawable/message_got_read_receipt_from_target"
+               android:tint="@color/gray"
+               android:visibility="gone" />
+           <ImageView
+               android:id="@+id/readed"
+               android:layout_width="@dimen/_10sdp"
+               android:layout_height="@dimen/_20sdp"
+               android:src="@drawable/message_got_read_receipt_from_target"
+               android:visibility="gone" />
+       </LinearLayout>
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/senderCell"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:orientation="vertical"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:visibility="invisible">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:orientation="horizontal"
+    android:layout_height="wrap_content">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/sAvatarImg"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:src="@drawable/logo" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:orientation="vertical"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/sUsernameTxt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/sAvatarImg"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_toEndOf="@+id/sAvatarImg"
+            android:text="loading..."
+            android:textColor="@color/main_color"
+            android:textSize="17sp"
+            android:textStyle="normal|bold" />
+
+        <TextView
+            android:id="@+id/sDateTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/sUsernameTxt"
+            android:layout_alignStart="@+id/sUsernameTxt"
+            android:layout_marginTop="5dp"
+            android:text="loading..."
+            android:textColor="#333"
+            android:textSize="12sp" />
+
+
+
+    </LinearLayout>
+</LinearLayout>
+
+
+
+
+        <TextView
+            android:id="@+id/sMessTxt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/sAvatarImg"
+            android:layout_alignStart="@+id/sAvatarImg"
+            android:layout_marginRight="40dp"
+            android:background="@drawable/rounded_corner_sender_cell"
+            android:layout_marginLeft="8dp"
+            android:fontFamily="sans-serif-condensed"
+            android:paddingLeft="5dp"
+            android:paddingTop="5dp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:paddingBottom="5dp"
+            android:text="loading..."
+            android:textColor="#fff"
+            android:textSize="15sp" />
+        <ImageView
+            android:id="@+id/sImage"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_alignTop="@+id/sMessTxt"
+            android:layout_alignEnd="@+id/sMessTxt"
+            android:layout_marginRight="80dp"
+            android:layout_marginLeft="8dp"
+            android:layout_toEndOf="@+id/sDateTxt"
+            android:background="@drawable/rounded_corner_receiver"
+            android:padding="@dimen/_10sdp"
+            android:scaleType="centerCrop"
+            android:visibility="invisible"
+            app:srcCompat="@drawable/logo" />
+
+    </LinearLayout>
+
+</RelativeLayout>

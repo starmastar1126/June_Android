@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="Gradle: com.github.nihad92:SwipeableCards:1.0.19@aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/3b7c02ad0fa414b4941511e68a1a6de9/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/3b7c02ad0fa414b4941511e68a1a6de9/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.nihad92/SwipeableCards/1.0.19/1a6b26d67b71c1641ac4e6b061850a7698daa3ff/SwipeableCards-1.0.19-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

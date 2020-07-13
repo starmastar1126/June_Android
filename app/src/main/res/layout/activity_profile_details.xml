@@ -1,0 +1,525 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/upTopView"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@color/colorPrimary"
+        android:visibility="gone">
+
+
+        <TextView
+            android:id="@+id/upUsernameTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:gravity="center_vertical"
+            android:text="@string/profile"
+            android:textColor="#fff"
+            android:textStyle="normal|bold" />
+
+
+        <ImageView
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:layout_alignBaseline="@+id/upOptionsButt"
+            android:layout_alignBottom="@+id/upOptionsButt"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/back_butt"
+            android:backgroundTint="@color/white"
+            android:tint="@color/white" />
+
+
+    </RelativeLayout>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/fa_avatar_iv"
+                    android:layout_width="@dimen/_50sdp"
+                    android:layout_height="@dimen/_50sdp"
+                    android:src="@drawable/logo" />
+
+                <TextView
+                    android:id="@+id/name1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_toEndOf="@+id/fa_avatar_iv"
+                    android:textColor="@color/black"
+                    android:textSize="17sp"
+                    tools:text="Mark Middleton" />
+
+                <TextView
+                    android:id="@+id/fa_joined_title_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/name1"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_toEndOf="@+id/fa_avatar_iv"
+                    android:text="@string/joined"
+                    android:textColor="@color/gray" />
+
+                <TextView
+                    android:id="@+id/joinedTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/fa_joined_title_tv"
+                    android:layout_marginStart="10dp"
+                    android:layout_toEndOf="@+id/fa_joined_title_tv"
+                    android:singleLine="true"
+                    android:textColor="@color/black"
+                    tools:text="2 days ago" />
+
+                <TextView
+                    android:id="@+id/gander"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/fa_joined_title_tv"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_toEndOf="@+id/fa_avatar_iv"
+                    android:text="@string/gander"
+                    android:textColor="@color/gray" />
+
+                <TextView
+                    android:id="@+id/Gander1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/gander"
+                    android:layout_marginStart="10dp"
+                    android:layout_toEndOf="@+id/fa_joined_title_tv"
+                    android:singleLine="true"
+                    android:textColor="@color/black"
+                    tools:text="" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:background="@android:color/black">
+
+                <ProgressBar
+                    android:id="@+id/ibc_loading_pb"
+                    style="?android:attr/progressBarStyleSmall"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_centerInParent="true"
+                    android:indeterminateTint="@color/colorPrimary"
+                    android:visibility="visible" />
+
+                <com.smarteist.autoimageslider.SliderView
+                    android:id="@+id/imageSlider"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_280sdp"
+                    android:background="@android:color/black"
+                    app:sliderAutoCycleDirection="back_and_forth"
+                    app:sliderAutoCycleEnabled="false"
+                    app:sliderCircularHandlerEnabled="true"
+                    app:sliderIndicatorGravity="center_horizontal|bottom"
+                    app:sliderIndicatorMargin="15dp"
+                    app:sliderIndicatorOrientation="horizontal"
+                    app:sliderIndicatorPadding="3dp"
+                    app:sliderIndicatorRadius="2dp"
+                    app:sliderIndicatorSelectedColor="@color/colorPrimary"
+                    app:sliderIndicatorUnselectedColor="#FFF"
+                    app:sliderStartAutoCycle="false" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:background="@drawable/edit_text_shape_bg"
+                android:orientation="vertical"
+                android:paddingStart="@dimen/_10sdp"
+                android:paddingEnd="@dimen/_10sdp"
+                android:paddingBottom="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/about_me"
+                    android:textColor="@color/gray"
+                    android:textSize="12sp" />
+
+                <woopy.com.juanmckenzie.caymanall.views.TextViewC
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:background="@null"
+                    android:gravity="start|top"
+                    android:lines="4"
+                    android:maxLines="4"
+                    android:minLines="4"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/gray"
+                    android:textSize="15sp"
+                    tools:text="J Smith" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+                <FrameLayout
+                    android:id="@+id/frame"
+                    android:layout_width="match_parent"
+                    android:layout_height="450dp"
+                    android:background="@drawable/profile"
+                    android:visibility="visible">
+
+                    <com.smarteist.autoimageslider.SliderView
+                        android:id="@+id/imageSlider1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/black"
+                        app:sliderAutoCycleDirection="back_and_forth"
+                        app:sliderAutoCycleEnabled="false"
+                        app:sliderCircularHandlerEnabled="true"
+                        app:sliderIndicatorGravity="center_horizontal|bottom"
+                        app:sliderIndicatorMargin="15dp"
+                        app:sliderIndicatorOrientation="horizontal"
+                        app:sliderIndicatorPadding="3dp"
+                        app:sliderIndicatorRadius="2dp"
+                        app:sliderIndicatorSelectedColor="@color/colorPrimary"
+                        app:sliderIndicatorUnselectedColor="#FFF"
+                        app:sliderStartAutoCycle="false" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:id="@+id/upBackButt"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginTop="25dp"
+                            android:src="@drawable/back_ic"
+                            android:tint="@color/white" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginRight="20dp"
+                            android:layout_marginBottom="20dp"
+                            android:gravity="right"
+                            android:orientation="horizontal"
+                            android:visibility="gone">
+
+                            <ImageView
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:layout_marginTop="25dp"
+                                android:src="@drawable/twitter" />
+
+                            <ImageView
+
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:layout_marginLeft="8dp"
+                                android:layout_marginTop="25dp"
+                                android:src="@drawable/facebook" />
+
+                            <ImageView
+
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:layout_marginLeft="8dp"
+                                android:layout_marginTop="25dp"
+                                android:src="@drawable/insta" />
+                        </LinearLayout>
+                    </RelativeLayout>
+                </FrameLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/imageSlider1"
+                    android:layout_marginTop="10dp"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <woopy.com.juanmckenzie.caymanall.views.TextViewC
+                            android:id="@+id/name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginTop="12dp"
+                            android:drawableStart="@drawable/user_ic"
+                            android:drawablePadding="@dimen/_4sdp"
+                            android:drawableTint="@android:color/black"
+                            android:letterSpacing="0.05"
+                            android:text="Mark Willson"
+                            android:textColor="@color/colorHead"
+                            android:textSize="20dp"
+                            android:textStyle="bold" />
+
+                        <ImageView
+                            android:id="@+id/verified"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/_5sdp"
+                            android:layout_marginTop="12dp"
+                            android:layout_marginBottom="@dimen/_5sdp"
+                            android:src="@drawable/verifiedno" />
+                    </LinearLayout>
+
+
+                    <woopy.com.juanmckenzie.caymanall.views.TextViewC
+                        android:id="@+id/education"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:text="Designer | Artist | Biker | Player"
+                        android:textColor="@color/colorpara"
+                        android:textSize="15dp"
+                        android:visibility="gone" />
+
+
+                    <woopy.com.juanmckenzie.caymanall.views.TextViewC
+                        android:id="@+id/aboutme"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:textColor="@color/colorpara"
+                        android:textSize="13dp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0.2dp"
+                        android:layout_marginTop="20dp"
+                        android:background="#c6cbcf"
+                        android:visibility="gone" />
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="18dp"
+                        android:layout_marginRight="15dp"
+                        android:orientation="horizontal"
+                        android:visibility="gone">
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <woopy.com.juanmckenzie.caymanall.views.TextViewC
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="532"
+                                android:textColor="@color/colorHead"
+                                android:textSize="20dp" />
+
+                            <woopy.com.juanmckenzie.caymanall.views.TextViewC
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Post"
+                                android:textColor="@color/colorpara" />
+                        </LinearLayout>
+
+                        <LinearLayout
+
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <woopy.com.juanmckenzie.caymanall.views.TextViewC
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="852"
+                                android:textColor="@color/colorHead"
+                                android:textSize="20dp" />
+
+                            <woopy.com.juanmckenzie.caymanall.views.TextViewC
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Following"
+                                android:textColor="@color/colorpara" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <woopy.com.juanmckenzie.caymanall.views.TextViewC
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="5562"
+                                android:textColor="@color/colorHead"
+                                android:textSize="20dp" />
+
+                            <woopy.com.juanmckenzie.caymanall.views.TextViewC
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Followers"
+                                android:textColor="@color/colorpara" />
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+                <TextView
+                    android:id="@+id/milesaway"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_weight="1"
+                    android:text="3 miles away"
+                    android:textColor="@color/colorHead" />
+
+
+                <TextView
+                    android:id="@+id/Languagesheading"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="10sp"
+                    android:layout_marginRight="20dp"
+                    android:text="Languages"
+                    android:textAlignment="center"
+                    android:textColor="#333"
+                    android:textSize="12sp"
+                    android:textStyle="normal|bold" />
+
+                <me.gujun.android.taggroup.TagGroup
+                    android:id="@+id/tag_groupLanguages"
+                    style="@style/TagGroup"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:visibility="gone"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginRight="20dp"
+                    android:padding="@dimen/_3sdp"
+                    app:atg_backgroundColor="@color/color_primary_dark"
+                    app:atg_borderColor="@color/colorPrimary"
+                    app:atg_horizontalPadding="@dimen/_6sdp"
+                    app:atg_textColor="@color/white"
+                    app:atg_textSize="@dimen/_12sdp"
+                    app:atg_verticalPadding="@dimen/_6sdp" />
+
+                <TextView
+                    android:id="@+id/Hobbiesheading"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="10sp"
+                    android:layout_marginRight="20dp"
+                    android:text="Hobbies"
+                    android:textAlignment="center"
+                    android:textColor="#333"
+                    android:textSize="12sp"
+                    android:textStyle="normal|bold" />
+
+
+                <me.gujun.android.taggroup.TagGroup
+                    android:id="@+id/tag_groupHobbies"
+                    style="@style/TagGroup"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginRight="20dp"
+                    android:padding="@dimen/_3sdp"
+                    app:atg_backgroundColor="@color/color_primary_dark"
+                    app:atg_borderColor="@color/colorPrimary"
+                    app:atg_horizontalPadding="@dimen/_6sdp"
+                    android:visibility="gone"
+                    app:atg_textColor="@color/white"
+                    app:atg_textSize="@dimen/_12sdp"
+                    app:atg_verticalPadding="@dimen/_6sdp" />
+
+
+                <woopy.com.juanmckenzie.caymanall.views.TextViewC
+                    android:id="@+id/upAdsposted"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="10sp"
+                    android:layout_marginRight="20dp"
+                    android:alpha="0.8"
+                    android:gravity="center"
+                    android:padding="@dimen/_5sdp"
+                    android:text="@string/report_user"
+                    android:textAlignment="center"
+                    android:textColor="@android:color/holo_red_dark"
+                    android:textSize="12sp"
+                    android:textStyle="normal|bold" />
+            </LinearLayout>
+
+        </ScrollView>
+    </RelativeLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="Gradle: com.github.anonymous-ME:TagsEditText:0.5.0@aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/ffa43256702cdcf20fa2145739e42120/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/ffa43256702cdcf20fa2145739e42120/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.anonymous-ME/TagsEditText/0.5.0/fa27e616d733ecdede491e6eec0a5dbe63daba8f/TagsEditText-0.5.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
